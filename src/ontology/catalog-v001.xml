@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/pato/releases/2016-05-22/pato.owl" uri="imports/pato.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo.owl" uri="mgpo-edit.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1468352944686" name="http://purl.obolibrary.org/obo/mgpo-editors.owl" uri="mgpo-editors.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1468352944686" name="http://purl.obolibrary.org/obo/pato.owl" uri="imports/pato.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1468352944686" name="http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1468352944686" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit.owl"/>
+    </group>
+</catalog>
