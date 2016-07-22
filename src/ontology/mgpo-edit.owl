@@ -322,6 +322,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002033"/>
         <obo:IAO_0000115>A change in the strucutre of a glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
         <obo:UPHENO_0002037>abnormal glycan chain composition</obo:UPHENO_0002037>
+        <rdfs:comment>abnormal glycosylation of glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycan composition</rdfs:label>
     </owl:Class>
     
@@ -472,6 +473,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002044"/>
         <obo:IAO_0000115>A change in the strucutre of an N-glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
+        <rdfs:comment>abnormal glycosylation of N-glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal N-glycan composition</rdfs:label>
     </owl:Class>
     
@@ -757,6 +759,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002011"/>
         <obo:IAO_0000115>A change in the strucutre of a conjugated glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
+        <rdfs:comment>abnormal glycosylation of conjugated glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal conjugated glycan composition</rdfs:label>
     </owl:Class>
     
@@ -791,6 +794,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002043"/>
         <obo:IAO_0000115>A change in the strucutre of a glycoprotein glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
+        <rdfs:comment>abnormal glycosylation of glycoproteins</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycoprotein glycan composition</rdfs:label>
     </owl:Class>
     
@@ -2209,7 +2213,7 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002133"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002127"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002476"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2451,6 +2455,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002011"/>
+        <rdfs:comment>abnormal fucosylation of glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycan fucose content</rdfs:label>
     </owl:Class>
     
@@ -2485,6 +2490,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
         <obo:UPHENO_0002037>hyper-fucosylation</obo:UPHENO_0002037>
+        <rdfs:comment>increased fucosylation of glycans</rdfs:comment>
         <rdfs:label xml:lang="en">increased glycan fucose content</rdfs:label>
     </owl:Class>
     
@@ -2519,6 +2525,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
         <obo:UPHENO_0002037>hypo-fucosylation</obo:UPHENO_0002037>
+        <rdfs:comment>decreased fucosylation of glycans</rdfs:comment>
         <rdfs:label xml:lang="en">decreased glycan fucose content</rdfs:label>
     </owl:Class>
     
@@ -2552,6 +2559,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002020"/>
+        <rdfs:comment>abnormal fucosylation of N-glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal N-glycan fucose content</rdfs:label>
     </owl:Class>
     
@@ -2585,6 +2593,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002168"/>
+        <rdfs:comment>increased fucosylation of N-glycans</rdfs:comment>
         <rdfs:label xml:lang="en">increased N-glycan fucose content</rdfs:label>
     </owl:Class>
     
@@ -2618,6 +2627,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002168"/>
+        <rdfs:comment>decreased fucosylation of N-glycans</rdfs:comment>
         <rdfs:label xml:lang="en">decreased N-glycan fucose content</rdfs:label>
     </owl:Class>
     
