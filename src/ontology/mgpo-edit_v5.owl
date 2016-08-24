@@ -13,6 +13,12 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/mgpo.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2016-05-22/pato.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/vo/external/hp_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/vo/external/go_import.owl."/>
+        <rdfs:comment>Testing approach where composition phenotypes made a subtypes of levels phenotypes.
+
+Rationale here is that anytime there is a composition defect w.r.t. a specific residue (e.g. hyper- or hypo- fucosuylation), there will necessarily be an increase or decrease. respectively, in the levels of fucosylated glycans in the sample.  Right?
+
+In most cases, curators can annotate to this more specific level of abnormal fucosylation phenotype. But there may be cases where there are increased fucosylated glycan levels that do not refelct an abnormal fucosylation phenotype.  Well maybe not for fucose, but for other residues like mannose that form core of glycan structures.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -203,7 +209,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002193"/>
         <obo:IAO_0000115>An increase or decrease in the amount of a glycan present in the body, cell, or specific compartment  therein.</obo:IAO_0000115>
         <rdfs:comment>The distinction between abnormal glycan levels and abnormal glycan structure/composition is confounded by the fact that specific phenotypes in both categories are typically reported in the literature by describing  the amount of a particular type of glycan. For example, &quot;increased sialylated oligosaccharides in the lysosome&quot; is verbatim text reporting a ‘compositional’ defect, and &quot;increased levels of complex N-Glycans in the serum&quot;  is verbatim text reporting a ‘level’ defect. The key difference is that the former defect indicates that glycans contain abnormalities in their sialyl content that make them compositionally different that glycan end products normally found in the lysosome. And biologically, this defect likely results from defects in glycosylation, deglycosylation, or isomerase enzymes.  By contrast, the latter defect does not reflect a structural/compositional abnormality in the specified glycan, but rather that the level of a certain normal type of glycan end-product is elevated. Compared to a compositional phenotype, this defect likely has a very different biological cause related to abnormal glycan degradation or trafficking.</rdfs:comment>
-        <rdfs:label xml:lang="en">abnormal glycan level</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal glycan levels</rdfs:label>
     </owl:Class>
     
 
@@ -564,28 +570,12 @@
     <!-- http://purl.obolibrary.org/obo/UPHENO_0002033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002033">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002124"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002131"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
         <obo:IAO_0000115>A phenotype characterized by abnormality in the levels or structural composition of a glycan.</obo:IAO_0000115>
+        <rdfs:comment>&apos;has part&apos; some 
+    (quality
+     and (&apos;has modifier&apos; some abnormal)
+     and (&apos;inheres in&apos; some glycan))</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycan phenotype</rdfs:label>
     </owl:Class>
     
@@ -987,28 +977,12 @@
     <!-- http://purl.obolibrary.org/obo/UPHENO_0002101 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002101">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002124"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002148"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
         <obo:IAO_0000115>A phenotype characterized by abnormality of a glyco-conjugate molecular entity.</obo:IAO_0000115>
+        <rdfs:comment>&apos;has part&apos; some 
+    (quality
+     and (&apos;has modifier&apos; some abnormal)
+     and (&apos;inheres in&apos; some glyco-conjugate))</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glyco-conjugate phenotype</rdfs:label>
     </owl:Class>
     
@@ -1073,7 +1047,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002189"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002193"/>
         <rdfs:label xml:lang="en">abnormal glycoaminoacid levels</rdfs:label>
     </owl:Class>
     
@@ -1579,9 +1553,10 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002190"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002120"/>
         <obo:UPHENO_0002037>abnormal fucosylation of glycans</obo:UPHENO_0002037>
-        <rdfs:label xml:lang="en">abnormal glycan fucose content</rdfs:label>
+        <obo:UPHENO_0002037>abnormal glycan fucose content</obo:UPHENO_0002037>
+        <rdfs:label xml:lang="en">abnormal glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
@@ -1613,10 +1588,11 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002121"/>
         <obo:UPHENO_0002037>hyper-fucosylation</obo:UPHENO_0002037>
         <obo:UPHENO_0002037>increased fucosylation of glycans</obo:UPHENO_0002037>
-        <rdfs:label xml:lang="en">increased glycan fucose content</rdfs:label>
+        <obo:UPHENO_0002037>increased glycan fucose content</obo:UPHENO_0002037>
+        <rdfs:label xml:lang="en">increased glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
@@ -1648,10 +1624,11 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002122"/>
         <obo:UPHENO_0002037>decreased fucosylation of glycans</obo:UPHENO_0002037>
+        <obo:UPHENO_0002037>decreased glycan fucose content</obo:UPHENO_0002037>
         <obo:UPHENO_0002037>hypo-fucosylation</obo:UPHENO_0002037>
-        <rdfs:label xml:lang="en">decreased glycan fucose content</rdfs:label>
+        <rdfs:label xml:lang="en">decreased glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
@@ -1763,27 +1740,11 @@
     <!-- http://purl.obolibrary.org/obo/UPHENO_0002189 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002189">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000070"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002124"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002148"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002101"/>
+        <rdfs:comment>&apos;has part&apos; some 
+    (amount
+     and (&apos;has modifier&apos; some abnormal)
+     and (&apos;inheres in&apos; some glyco-conjugate))</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glyco-conjugate levels</rdfs:label>
     </owl:Class>
     
