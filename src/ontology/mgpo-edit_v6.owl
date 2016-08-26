@@ -326,6 +326,8 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002193"/>
         <obo:IAO_0000115>An abnormality in the structure or composition of glycans, or their attachment to aglycone conjugation targets.</obo:IAO_0000115>
         <obo:UPHENO_0002032>Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy.</obo:UPHENO_0002032>
+        <obo:UPHENO_0002037>abnormal glycan structure</obo:UPHENO_0002037>
+        <obo:UPHENO_0002037>abnormal glycosylation structure</obo:UPHENO_0002037>
         <rdfs:comment>Abnormal glycosylation phenotypes cover altered glycan composition, including altered sugar residue content, chain length, linkage, or branching patterns, as well as altered occupancy, characterized by abnormal degree or pattens or conjugation of glycan chains to aglycone targets.
 
 Abnormal glycosylation phenotypes typically result from defects in the machinery that directly (glycosyltransferase, glycosidase, oligosaccharyltransferase enzymes) or indierctly (isomerasaes, transport proteins, chaperones, glycan residue synthesis/activation pathways, etc.) contribute to the building/remodeling of glycan chains, or their attachement to aglycone targets.</rdfs:comment>

@@ -6,17 +6,17 @@
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/pato/releases/2016-05-22/pato.owl" uri="imports/pato.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo.owl" uri="mgpo-edit.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="http://purl.obolibrary.org/obo/mgpo-editors.owl" uri="mgpo-editors.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="http://purl.obolibrary.org/obo/mgpo-hpo-bridge.owl" uri="mgpo-hpo-bridge.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="http://purl.obolibrary.org/obo/pato.owl" uri="imports/pato.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v4.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v5.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v6.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="http://purl.obolibrary.org/obo/vo/external/HP_import.owl." uri="imports/hpo_carb_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="http://purl.obolibrary.org/obo/vo/external/go_import.owl." uri="imports/go_carb_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472153285636" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="http://purl.obolibrary.org/obo/mgpo-editors.owl" uri="mgpo-editors.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="http://purl.obolibrary.org/obo/mgpo-hpo-bridge.owl" uri="mgpo-hpo-bridge.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="http://purl.obolibrary.org/obo/pato.owl" uri="imports/pato.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v4.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v5.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="duplicate:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit_v6.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="http://purl.obolibrary.org/obo/vo/external/HP_import.owl." uri="imports/hpo_carb_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="http://purl.obolibrary.org/obo/vo/external/go_import.owl." uri="imports/go_carb_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472229824233" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit.owl"/>
     </group>
 </catalog>
