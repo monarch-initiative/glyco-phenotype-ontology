@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/chebi_import.owl" uri="chebi_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/go_import.owl" uri="go_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/pato.owl" uri="pato.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/ro_import.owl" uri="ro_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/uberon_import.owl" uri="uberon_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/vo/external/HP_import.owl." uri="hpo_carb_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472519123261" name="http://purl.obolibrary.org/obo/vo/external/go_import.owl." uri="go_carb_import.owl"/>
+    </group>
+</catalog>
