@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/mgpo.owl" uri="mgpo-edit.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/pro_import.owl" uri="imports/pro_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/uberon_import.owl" uri="imports/uberon_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/go_import.owl" uri="imports/go_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/chebi_import.owl" uri="imports/chebi_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/ro_import.owl" uri="imports/ro_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/mgpo-hpo-bridge.owl" uri="mgpo-hpo-bridge.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/vo/external/go_import.owl." uri="imports/go_carb_import.owl"/>
-    <uri id="User Edited Redirect" name="http://purl.obolibrary.org/obo/vo/external/hp_import.owl" uri="imports/hpo_carb_import.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/pato/releases/2016-05-22/pato.owl" uri="imports/pato.owl"/>
-    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo.owl" uri="mgpo-edit.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/chebi_import.owl" uri="imports/chebi_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/go_import.owl" uri="imports/go_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/hpo-edit20160831.owl" uri="mgpo-hpo/hpo-edit20160831.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/mgpo-editors.owl" uri="mgpo-editors.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/mgpo-hpo-bridge.owl" uri="mgpo-hpo/mgpo-hpo-bridge.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/mgpo-hpo.owl" uri="mgpo-hpo/mgpo-hpo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/pato.owl" uri="imports/pato.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/pro_import.owl" uri="imports/pro_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/ro_import.owl" uri="imports/ro_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/uber-gpo.owl" uri="mgpo-edit.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/uberon_import.owl" uri="imports/uberon_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/vo/external/HP_import.owl." uri="ref-slims/hpo_carb_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="http://purl.obolibrary.org/obo/vo/external/go_import.owl." uri="ref-slims/go_carb_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit_v2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit_v3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit_v4.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1481819627678" name="shadowed:http://purl.obolibrary.org/obo/uber-gpo.owl" uri="old/mgpo-edit_v5.owl"/>
-    </group>
+
+
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/iao_import.owl" uri="imports/iao_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/iao_import.obo" uri="imports/iao_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/go_import.owl" uri="imports/go_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/go_import.obo" uri="imports/go_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/ro_import.obo" uri="imports/ro_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/uberon_import.obo" uri="imports/uberon_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/pato_import.obo" uri="imports/pato_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/chebi_import.obo" uri="imports/chebi_import.obo"/>
+  
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/pr_import.owl" uri="imports/pr_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/imports/pr_import.obo" uri="imports/pr_import.obo"/>
+  
+ 
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/mgpo/patterns/definitions.owl" uri="../patterns/definitions.owl"/>
+  <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
 </catalog>
