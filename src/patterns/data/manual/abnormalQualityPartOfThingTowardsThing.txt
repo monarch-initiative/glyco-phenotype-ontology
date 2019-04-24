@@ -1,0 +1,11 @@
+http://purl.obolibrary.org/obo/MGPO_0002231
+http://purl.obolibrary.org/obo/PATO_0002083
+http://purl.obolibrary.org/obo/CHEBItemp_0002135
+http://purl.obolibrary.org/obo/BFO_0000050
+http://purl.obolibrary.org/obo/RO_0002503
+http://purl.obolibrary.org/obo/PR_000016261
+http://purl.obolibrary.org/obo/RO_0002573
+http://purl.obolibrary.org/obo/PATO_0000460
+http://purl.obolibrary.org/obo/RO_0000052
+http://purl.obolibrary.org/obo/BFO_0000051
+http://purl.obolibrary.org/obo/CHEBItemp_0002132

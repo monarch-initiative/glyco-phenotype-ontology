@@ -1,0 +1,794 @@
+format-version: 1.2
+data-version: mgpo/releases/2019-04-24/mgpo-base.obo
+remark: Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.\n\nThe challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn't really hurt anything.
+ontology: mgpo/mgpo-base.obo
+
+[Term]
+id: CHEBI:17089
+is_a: CHEBItemp:0002152 ! protein glyco-conjugate
+
+[Term]
+id: CHEBI_temp:0002141
+name: conjugated glycan chain
+is_a: CHEBItemp:0002164 ! glycan group
+
+[Term]
+id: CHEBItemp:0002131
+name: glycan
+union_of: CHEBItemp:0002143 ! free glycan
+union_of: CHEBItemp:0002164 ! glycan group
+
+[Term]
+id: CHEBItemp:0002132
+name: glycan residue
+is_a: CHEBItemp:0002164 ! glycan group
+
+[Term]
+id: CHEBItemp:0002133
+name: fucose residue
+is_a: CHEBItemp:0002132 ! glycan residue
+
+[Term]
+id: CHEBItemp:0002134
+name: polypeptide-linked glycan chain
+is_a: CHEBI_temp:0002141 ! conjugated glycan chain
+
+[Term]
+id: CHEBItemp:0002135
+name: N-glycan chain
+is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
+
+[Term]
+id: CHEBItemp:0002136
+name: O-glycan chain
+is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
+
+[Term]
+id: CHEBItemp:0002137
+name: C-glycan chain
+is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
+
+[Term]
+id: CHEBItemp:0002139
+name: GPI anchor
+is_a: CHEBItemp:0002134 ! polypeptide-linked glycan chain
+
+[Term]
+id: CHEBItemp:0002143
+name: free glycan
+
+[Term]
+id: CHEBItemp:0002148
+name: glyco-conjugate
+
+[Term]
+id: CHEBItemp:0002151
+name: GPI-anchored glycoprotein
+is_a: CHEBItemp:0002152 ! protein glyco-conjugate
+
+[Term]
+id: CHEBItemp:0002152
+name: protein glyco-conjugate
+
+[Term]
+id: CHEBItemp:0002157
+name: terminal fucose residue
+
+[Term]
+id: CHEBItemp:0002164
+name: glycan group
+
+[Term]
+id: CHEBItemp:0002187
+name: glycoprotein glycan chain
+is_a: CHEBItemp:0002134 ! polypeptide-linked glycan chain
+
+[Term]
+id: CHEBItemp:0002188
+name: lipid-linked glycan chain
+is_a: CHEBI_temp:0002141 ! conjugated glycan chain
+
+[Term]
+id: CHEBItemp:0002236
+name: glycan antenna
+def: "The branch or antenna component of a glycan chain, which extends the glycan 'core'." []
+is_a: CHEBItemp:0002164 ! glycan group
+property_value: MGPO:0002037 "antennary glycan group" xsd:string
+
+[Term]
+id: CHEBItemp:0002237
+name: glycan core
+def: "The 'core' of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan." []
+is_a: CHEBItemp:0002164 ! glycan group
+property_value: MGPO:0002037 "core glycan group" xsd:string
+
+[Term]
+id: MGPO:0001001
+name: Phenotype
+
+[Term]
+id: MGPO:0002001
+name: abnormal glycan metabolism
+def: "An abnormality in the process of glycan catabolism or biosynthesis." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002002
+name: abnormal glycan levels
+def: "An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein." []
+is_a: MGPO:0001001 ! Phenotype
+property_value: MGPO:0002032 "Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective." xsd:string
+
+[Term]
+id: MGPO:0002003
+name: abnormal glycan occupancy
+def: "An increase or decrease in the number of glycan chains conjugated to an aglycone target." []
+comment: "Occupancy" is used here to describe the extent of conjugation of a glycan chain to glycosylation sites on an aglycone target. Abnormal occupancy does not speak to the structure or composition of the glycan chain, just the relative abundance of glycan chains on some protein or lipid target.
+is_a: MGPO:0002009 ! abnormal glycosylation
+property_value: MGPO:0002032 "Relevant Classification Axes (in order shown for exemplar classes below):\n1  glycosylation/target type (N-linked vs O-linked vs proteoglycan)\n1.1  glycosylated residue (e.g. Asn, Ser, Thr)\n1.2  specific aglycone target (e.g. transferrin)\n1.2.1  anatomical/cellular location (e.g. serum, golgi)\n" xsd:string
+
+[Term]
+id: MGPO:0002004
+name: abnormal glycan structure
+comment: A change in the molecular structure of a glycan, including altered sugar composition, chain length, linkage or branching patterns, or modifications on a sugar residues
+comment: Former logical definition:\n\n'has part' some \n    (structure\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))
+comment: The distinction between abnormal glycan levels and abnormal glycan structure/composition is confounded by the fact that specific phenotypes in both categories are typically reported in the literature by describing  the amount of a particular type of glycan. For example, "increased sialylated oligosaccharides in the lysosome" is verbatim text reporting a ‘compositional’ defect, and "increased levels of complex N-Glycans in the serum"  is verbatim text reporting a ‘level’ defect. The key difference is that the former defect indicates that glycans contain abnormalities in their sialyl content that make them compositionally different that glycan end products normally found in the lysosome. And biologically, this defect likely results from defects in glycosylation, deglycosylation, or isomerase enzymes.  By contrast, the latter defect does not reflect a structural/compositional abnormality in the specified glycan, but rather that the level of a certain normal type of glycan end-product is elevated. Compared to a compositional phenotype, this defect likely has a very different biological cause related to abnormal glycan degradation or trafficking.
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002005
+name: abnormal glycan-related process
+def: "Abnormality in a biological process that has a glycan or glycan-containing entity as a product or active  participant." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002006
+name: abnormal glycan binding
+def: "An abnormality in the process of a glycan binding to its target." []
+is_a: MGPO:0002005 ! abnormal glycan-related process
+
+[Term]
+id: MGPO:0002007
+name: abnormal deglycosylation
+def: "An abnormality in the process of glycan deglycosylation." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002008
+name: abnormal glycan catabolism
+is_a: MGPO:0002001 ! abnormal glycan metabolism
+
+[Term]
+id: MGPO:0002009
+name: abnormal glycosylation
+def: "An abnormality in the structure or composition of glycans, or their attachment to aglycone conjugation targets." []
+comment: Abnormal glycosylation phenotypes cover altered glycan composition, including altered sugar residue content, chain length, linkage, or branching patterns, as well as altered occupancy, characterized by abnormal degree or pattens or conjugation of glycan chains to aglycone targets.\n\nAbnormal glycosylation phenotypes typically result from defects in the machinery that directly (glycosyltransferase, glycosidase, oligosaccharyltransferase enzymes) or indierctly (isomerasaes, transport proteins, chaperones, glycan residue synthesis/activation pathways, etc.) contribute to the building/remodeling of glycan chains, or their attachement to aglycone targets.
+is_a: MGPO:0001001 ! Phenotype
+property_value: MGPO:0002032 "Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy." xsd:string
+property_value: MGPO:0002037 "abnormal glycan structure" xsd:string
+property_value: MGPO:0002037 "abnormal glycosylation structure" xsd:string
+
+[Term]
+id: MGPO:0002010
+name: abnormal glycan branching
+def: "A change in the structure of a glycan chain due to altered branching patterns. " []
+is_a: MGPO:0002009 ! abnormal glycosylation
+property_value: MGPO:0002032 "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)\n" xsd:string
+
+[Term]
+id: MGPO:0002011
+name: abnormal glycan composition
+def: "A change in the strucutre of a glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another." []
+comment: abnormal glycosylation of glycans
+is_a: MGPO:0002009 ! abnormal glycosylation
+property_value: MGPO:0002037 "abnormal glycan chain composition" xsd:string
+
+[Term]
+id: MGPO:0002012
+name: abnormal N-linked glycoprotein occupancy
+def: "An increase or decrease in the number of N-glycan chains conjugated to aglycone targets." []
+is_a: MGPO:0002201 ! abnormal protein N-linked glycosylation
+
+[Term]
+id: MGPO:0002013
+name: abnormal O-linked glycoprotein occupancy
+def: "An increase or decrease in the number of O-glycan chains conjugated to aglycone targets." []
+is_a: MGPO:0002202 ! abnormal protein O-linked glycosylation
+
+[Term]
+id: MGPO:0002017
+name: abnormal IDUA activity
+def: "Altered IDUA enzymatic activity in an organism, cell, or part thereof." []
+is_a: MGPO:0002036 ! abnormal glycosidase activity
+
+[Term]
+id: MGPO:0002018
+name: abnormal heparan sulfate degradation
+is_a: MGPO:0002008 ! abnormal glycan catabolism
+
+[Term]
+id: MGPO:0002019
+name: abnormal R-type lectin binding
+is_a: MGPO:0002006 ! abnormal glycan binding
+
+[Term]
+id: MGPO:0002023
+name: abnormal transferrin N-glycan occupancy
+def: "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002024
+name: abnormal serum transferrin N-glycan occupancy
+def: "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein in blood serum." []
+is_a: MGPO:0002023 ! abnormal transferrin N-glycan occupancy
+
+[Term]
+id: MGPO:0002027
+name: abnormal golgi biantennary N-glycan levels
+def: "An increase or decrease in the amount or concentration of normal biantennary N-gycan structures present in the golgi complex." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002028
+name: DeprecatedClass
+
+[Term]
+id: MGPO:0002029
+name: abnormal glycan-related activity
+def: "An alteration in the activity of a molecular entity such as an enzyme or transporter protein that acts on glycans or glycan-containing entities." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002030
+name: abnormal glycan biosynthesis
+is_a: MGPO:0002001 ! abnormal glycan metabolism
+
+[Term]
+id: MGPO:0002031
+name: abnormal glycosaminoglycan degradation
+is_a: MGPO:0002008 ! abnormal glycan catabolism
+
+[Term]
+id: MGPO:0002033
+name: abnormal glycan phenotype
+def: "A phenotype characterized by abnormality in the levels or structural composition of a glycan." []
+comment: previous logical def: '\n\nhas part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002035
+name: abnormal glycosyltransferase activity
+def: "Altered glycosyltransferase activity in an organism, cell, or part thereof." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002036
+name: abnormal glycosidase activity
+def: "Altered glycosidase enzymatic activity in an organism, cell, or part thereof." []
+is_a: MGPO:0002028 ! DeprecatedClass
+property_value: MGPO:0002037 "abnormal glycosyl-hydrolase activity" xsd:string
+
+[Term]
+id: MGPO:0002038
+name: abnormal proteoglycan occupancy
+def: "An increase or decrease in the extent of number of glycan chains conjugated to proteoglycans." []
+comment: Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some proteoglycan)\n     and (towards some 'conjugated glycan chain'))
+is_a: MGPO:0002209 ! Triaged Candidates
+
+[Term]
+id: MGPO:0002039
+name: abnormal N-linked glycoprotein asparagine occupancy
+def: "An increase or decrease in the number of N-glycan chains conjugated to asparagine residues on aglycone targets." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002041
+name: abnormal glycan length
+def: "A change in the strucutre of a glycan chain due to variations in the number of sugar residue constituents." []
+is_a: MGPO:0002009 ! abnormal glycosylation
+property_value: MGPO:0002032 "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycolipid-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)" xsd:string
+property_value: MGPO:0002037 "abnormal length of glycan species" xsd:string
+
+[Term]
+id: MGPO:0002042
+name: abnormal glycan linkage
+def: "A change in the strucutre of a glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002028 ! DeprecatedClass
+property_value: MGPO:0002032 "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)" xsd:string
+
+[Term]
+id: MGPO:0002048
+name: abnormal sialyl content in serum N-glycans
+def: "A change in the strucutre of a serum-localized N-glycan chain due to variations in number and/or location of sialyl residues - typically an increased or decreased abundance of sialyl residues, or the substitution of sialyl residues for another residue type." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002050
+name: abnormal glycolipid glycan composition
+def: "A change in the strucutre of a glycolipid glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002051
+name: abnormal glycosphingolipid glycan composition
+is_a: MGPO:0002050 ! abnormal glycolipid glycan composition
+
+[Term]
+id: MGPO:0002052
+name: abnormal glycoglycerolipid glycan composition
+is_a: MGPO:0002050 ! abnormal glycolipid glycan composition
+
+[Term]
+id: MGPO:0002053
+name: abnormal lipopolysaccharide glycan composition
+def: "A change in the strucutre of a lipopolysaccharide glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002054
+name: abnormal conjugated glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002055
+name: abnormal free glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002056
+name: abnormal glycoprotein glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002057
+name: abnormal glycolipid glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002058
+name: abnormal lipopolysaccharide glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002059
+name: abnormal N-glycan length
+is_a: MGPO:0002056 ! abnormal glycoprotein glycan length
+
+[Term]
+id: MGPO:0002060
+name: abnormal O-glycan length
+is_a: MGPO:0002056 ! abnormal glycoprotein glycan length
+
+[Term]
+id: MGPO:0002062
+name: abnormal glycopeptide glycan length
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002068
+name: abnormal free glycan linkage
+def: "A change in the strucutre of a free glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002042 ! abnormal glycan linkage
+
+[Term]
+id: MGPO:0002069
+name: abnormal conjugated glycan linkage
+def: "A change in the strucutre of a conjugated glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002042 ! abnormal glycan linkage
+
+[Term]
+id: MGPO:0002070
+name: abnormal glycoprotein glycan linkage
+def: "A change in the strucutre of a glycoprotein glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002069 ! abnormal conjugated glycan linkage
+
+[Term]
+id: MGPO:0002071
+name: abnormal glycopeptide glycan linkage
+def: "A change in the strucutre of a glycopeptide glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002069 ! abnormal conjugated glycan linkage
+
+[Term]
+id: MGPO:0002073
+name: abnormal O-glycan linkage
+def: "A change in the strucutre of an O-glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002070 ! abnormal glycoprotein glycan linkage
+
+[Term]
+id: MGPO:0002074
+name: abnormal N-glycan linkage
+def: "A change in the strucutre of n N-glycan chain due to altered types of linkages between sugar residues. " []
+is_a: MGPO:0002070 ! abnormal glycoprotein glycan linkage
+
+[Term]
+id: MGPO:0002078
+name: abnormal glycopeptide glycan levels
+def: "An increase or decrease in the amount or concentration of normal glycopeptide gycan structures present in the body, cell, or specific location therein." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002081
+name: abnormal glycosaminoglycan length
+is_a: MGPO:0002056 ! abnormal glycoprotein glycan length
+
+[Term]
+id: MGPO:0002085
+name: abnormal glycan levels in the serum
+def: "An increase or decrease in the amount or concentration of glycan structures present in the blood serum.." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002086
+name: abnormal glycan levels in the CSF
+def: "An increase or decrease in the amount or concentration of glycan structures present in the CSF fluid." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002092
+name: abnormal Man9GlcNAc2 glycan levels
+def: "An increase or decrease in the amount or concentration of Man9GlcNAc2 gycan structures present in the body, cell, or specific location therein." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002093
+name: abnormal oligomannose N-glycan levels in golgi
+def: "An increase or decrease in the amount or concentration of normal oligomannose N-gycan structures present in the golgi complex." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002094
+name: abnormal transferrin-linked oligomannose N-glycan levels
+def: "An increase or decrease in the amount or concentration of transferring-linked oligomannose N-gycan structures present in the body, cell, or specific location therein." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002096
+name: abnormal Tn core O-glycan levels in blood cell plasma membrane
+def: "An increase or decrease in the amount or concentration of Tn core O-gycan structures present in the plasma membrane of blood cells." []
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002097
+name: abnormal GlcNAcT-II activity
+is_a: MGPO:0002035 ! abnormal glycosyltransferase activity
+property_value: MGPO:0002098 "see PMID:11805078" xsd:string
+
+[Term]
+id: MGPO:0002099
+name: decreased complex N-glycan levels
+is_a: MGPO:0002028 ! DeprecatedClass
+property_value: MGPO:0002098 "see PMID:11805078" xsd:string
+
+[Term]
+id: MGPO:0002101
+name: abnormal glyco-conjugate phenotype
+def: "A phenotype characterized by abnormality of a glyco-conjugate molecular entity." []
+comment: Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glyco-conjugate))
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002102
+name: abnormal glycoprotein phenotype
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002103
+name: abnormal glycolipid phenotype
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002104
+name: abnormal glycopeptide phenotype
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002105
+name: abnormal glycoaminoacid phenotype
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002106
+name: abnormal glycoaminoacid levels
+is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+
+[Term]
+id: MGPO:0002114
+name: increased glycan length
+is_a: MGPO:0002041 ! abnormal glycan length
+property_value: MGPO:0002037 "extended glycans" xsd:string
+
+[Term]
+id: MGPO:0002115
+name: decreased glycan length
+is_a: MGPO:0002041 ! abnormal glycan length
+property_value: MGPO:0002037 "truncated glycans" xsd:string
+
+[Term]
+id: MGPO:0002117
+name: increased N-glycan length
+is_a: MGPO:0002059 ! abnormal N-glycan length
+property_value: MGPO:0002037 "extended N-glycan" xsd:string
+
+[Term]
+id: MGPO:0002118
+name: decreased N-glycan length
+is_a: MGPO:0002059 ! abnormal N-glycan length
+property_value: MGPO:0002037 "truncated N-glycan" xsd:string
+
+[Term]
+id: MGPO:0002120
+name: abnormal fucosylated N-glycan levels
+is_a: MGPO:0002210 ! abnormal N-glycan levels
+
+[Term]
+id: MGPO:0002121
+name: increased fucosylated N-glycan levels
+is_a: MGPO:0002120 ! abnormal fucosylated N-glycan levels
+
+[Term]
+id: MGPO:0002122
+name: decreased fucosylated N-glycan levels
+is_a: MGPO:0002120 ! abnormal fucosylated N-glycan levels
+
+[Term]
+id: MGPO:0002138
+name: proteoglycan glycan chain
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002140
+name: lipid-linked glycan chain
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002142
+name: peptide-linked glycan chain
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002165
+name: abnormal N-glycan fucosylation
+is_a: MGPO:0002204 ! abnormal N-glycan composition
+property_value: MGPO:0002037 "abnormal fucosylation of N-glycans" xsd:string
+property_value: MGPO:0002037 "abnormal N-glycan fucose content" xsd:string
+
+[Term]
+id: MGPO:0002166
+name: increased N-glycan fucosylation
+is_a: MGPO:0002165 ! abnormal N-glycan fucosylation
+property_value: MGPO:0002037 "hyper-fucosylation of N-glycans" xsd:string
+property_value: MGPO:0002037 "increased fucosylation of N-glycans" xsd:string
+property_value: MGPO:0002037 "increased N-glycan fucose content" xsd:string
+
+[Term]
+id: MGPO:0002167
+name: decreased N-glycan fucosylation
+is_a: MGPO:0002165 ! abnormal N-glycan fucosylation
+property_value: MGPO:0002037 "decreased fucosylation of N-glycans" xsd:string
+property_value: MGPO:0002037 "decreased N-glycan fucose content" xsd:string
+property_value: MGPO:0002037 "hypo-fucosylation of N-glycans" xsd:string
+
+[Term]
+id: MGPO:0002182
+name: abnormal glycoprotein glycan occupancy
+comment: Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycoprotein)\n     and (towards some 'conjugated glycan chain'))
+is_a: MGPO:0002209 ! Triaged Candidates
+
+[Term]
+id: MGPO:0002189
+name: abnormal glyco-conjugate levels
+is_a: MGPO:0001001 ! Phenotype
+
+[Term]
+id: MGPO:0002190
+name: abnormal fucose metabolism/homeostasis
+comment: Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some 'fucose metabolic process'))
+is_a: MGPO:0002209 ! Triaged Candidates
+
+[Term]
+id: MGPO:0002192
+name: abnormal glycan binding
+is_a: MGPO:0001001 ! Phenotype
+
+[Term]
+id: MGPO:0002193
+name: abnormality of carbohydrate metabolism/homeostasis
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002199
+name: abnormal protein glycosylation
+is_a: MGPO:0002009 ! abnormal glycosylation
+
+[Term]
+id: MGPO:0002200
+name: abnormal lipid glycosylation
+is_a: MGPO:0002009 ! abnormal glycosylation
+
+[Term]
+id: MGPO:0002201
+name: abnormal protein N-linked glycosylation
+is_a: MGPO:0002199 ! abnormal protein glycosylation
+
+[Term]
+id: MGPO:0002202
+name: abnormal protein O-linked glycosylation
+is_a: MGPO:0002199 ! abnormal protein glycosylation
+
+[Term]
+id: MGPO:0002204
+name: abnormal N-glycan composition
+is_a: MGPO:0002201 ! abnormal protein N-linked glycosylation
+
+[Term]
+id: MGPO:0002205
+name: abnormal O-glycan composition
+is_a: MGPO:0002202 ! abnormal protein O-linked glycosylation
+
+[Term]
+id: MGPO:0002206
+name: abnormal O-glycan fucosylation
+is_a: MGPO:0002205 ! abnormal O-glycan composition
+property_value: MGPO:0002037 "abnormal fucosylation of O-glycans" xsd:string
+property_value: MGPO:0002037 "abnormal O-glycan fucose content" xsd:string
+
+[Term]
+id: MGPO:0002207
+name: decreased O-glycan fucosylation
+is_a: MGPO:0002206 ! abnormal O-glycan fucosylation
+property_value: MGPO:0002037 "decreased fucosylation of O-glycans" xsd:string
+property_value: MGPO:0002037 "decreased O-glycan fucose content" xsd:string
+property_value: MGPO:0002037 "hypo-fucosylation of O-glycans" xsd:string
+
+[Term]
+id: MGPO:0002208
+name: increased O-glycan fucosylation
+is_a: MGPO:0002206 ! abnormal O-glycan fucosylation
+property_value: MGPO:0002037 "hyper-fucosylation of O-glycans" xsd:string
+property_value: MGPO:0002037 "increased fucosylation of O-glycans" xsd:string
+property_value: MGPO:0002037 "increased O-glycan fucose content" xsd:string
+
+[Term]
+id: MGPO:0002209
+name: Triaged Candidates
+is_a: MGPO:0002028 ! DeprecatedClass
+
+[Term]
+id: MGPO:0002210
+name: abnormal N-glycan levels
+is_a: MGPO:0002002 ! abnormal glycan levels
+
+[Term]
+id: MGPO:0002211
+name: abnormal free glycan levels
+is_a: MGPO:0002002 ! abnormal glycan levels
+
+[Term]
+id: MGPO:0002212
+name: increased free glycan levels in the urine
+is_a: MGPO:0002213 ! increased free glycan levels
+
+[Term]
+id: MGPO:0002213
+name: increased free glycan levels
+is_a: MGPO:0002211 ! abnormal free glycan levels
+
+[Term]
+id: MGPO:0002214
+name: decreased free glycan levels
+is_a: MGPO:0002211 ! abnormal free glycan levels
+
+[Term]
+id: MGPO:0002215
+name: decreased free glycan levels in the urine
+is_a: MGPO:0002214 ! decreased free glycan levels
+
+[Term]
+id: MGPO:0002216
+name: increased free oligosaccharide levels in the urine
+is_a: MGPO:0002212 ! increased free glycan levels in the urine
+property_value: MGPO:0002037 "oligosacchariduria" xsd:string
+
+[Term]
+id: MGPO:0002217
+name: increased free monosaccharide levels in the urine
+is_a: MGPO:0002212 ! increased free glycan levels in the urine
+property_value: MGPO:0002037 "monosacchariduria" xsd:string
+
+[Term]
+id: MGPO:0002218
+name: abnormal free glycan levels in the urine
+is_a: MGPO:0002211 ! abnormal free glycan levels
+
+[Term]
+id: MGPO:0002219
+name: abnormal O-glycan levels
+is_a: MGPO:0002002 ! abnormal glycan levels
+
+[Term]
+id: MGPO:0002220
+name: abnormal fucosylated O-glycan levels
+is_a: MGPO:0002219 ! abnormal O-glycan levels
+
+[Term]
+id: MGPO:0002221
+name: decreased fucosylated O-glycan levels
+is_a: MGPO:0002220 ! abnormal fucosylated O-glycan levels
+
+[Term]
+id: MGPO:0002222
+name: increased fucosylated O-glycan levels
+is_a: MGPO:0002220 ! abnormal fucosylated O-glycan levels
+
+[Term]
+id: MGPO:0002223
+name: abnormal glycosyltransferase activity
+is_a: MGPO:0002226 ! abnormal glycosylation activity
+
+[Term]
+id: MGPO:0002224
+name: abnormal glycosidase activity
+is_a: MGPO:0002226 ! abnormal glycosylation activity
+
+[Term]
+id: MGPO:0002225
+name: abnormal oligosaccharyl transferase activity
+is_a: MGPO:0002223 ! abnormal glycosyltransferase activity
+
+[Term]
+id: MGPO:0002226
+name: abnormal glycosylation activity
+is_a: MGPO:0002009 ! abnormal glycosylation
+
+[Term]
+id: MGPO:0002227
+name: increased glycan branching
+is_a: MGPO:0002010 ! abnormal glycan branching
+
+[Term]
+id: MGPO:0002228
+name: decreased glycan branching
+is_a: MGPO:0002010 ! abnormal glycan branching
+
+[Term]
+id: MGPO:0002229
+name: abnormal transferrin N-linked glycosylation
+is_a: MGPO:0002201 ! abnormal protein N-linked glycosylation
+property_value: MGPO:0002032 "Not made equivalent to 'Abnrmal isoelectric focusing of serum transferrin' because there are other methods that could be used to reveal this phenotype." xsd:string
+
+[Term]
+id: MGPO:0002230
+name: abnormal occupancy of transferrin by N-glycans
+is_a: MGPO:0002229 ! abnormal transferrin N-linked glycosylation
+
+[Term]
+id: MGPO:0002231
+name: abnormal composition of transferrin-conjugated N-glycans
+is_a: MGPO:0002229 ! abnormal transferrin N-linked glycosylation
+
+[Term]
+id: MGPO:0002233
+name: abnormal glycoprotein levels
+is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+
+[Term]
+id: MGPO:0002234
+name: abnormal glycopeptide levels
+is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+
+[Term]
+id: MGPO:0002235
+name: decreased core-fucosylated N-glycan levels
+is_a: MGPO:0002122 ! decreased fucosylated N-glycan levels
+
+[Term]
+id: MGPO:0002238
+name: decreased antennary-fucosylated N-glycan levels
+is_a: MGPO:0002122 ! decreased fucosylated N-glycan levels
+
+[Term]
+id: PR:000016261
+name: serotransferrin
+def: "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof." []
+

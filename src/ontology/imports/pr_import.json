@@ -1,0 +1,724 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000019",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "bfo"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "quality"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_33154",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Fungi/Metazoa group",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "ncbi_taxonomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Opisthokonta"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_exact_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000015",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "bfo"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "process"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasSynonymType",
+      "type" : "PROPERTY",
+      "lbl" : "has_synonym_type"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+      "type" : "PROPERTY",
+      "lbl" : "database_cross_reference"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000025513",
+      "meta" : {
+        "definition" : {
+          "val" : "An organic group that results from covalent modification or chemical alteration to the side chain or backbone atoms of an amino acid residue or derivative thereof, where such alteration maintains the integrity of the amino acid chain containing the residue.",
+          "xrefs" : [ "PRO:DAN", "PRO:JSG" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "modified protein residue",
+          "xrefs" : [ "PRO:DAN" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "modified amino acid chain residue",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external. Note: This entity is distinct from MOD:00000 \"protein modification\" in that the latter includes proteolytic cleavages. [PRO:DAN, PRO:JSG]"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "modified amino-acid residue"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002331",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002331"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "involved_in"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_transitive",
+          "val" : "false"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "involved_in"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0001000"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "derives_from"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "derives_from"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000056",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0000056"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "participates_in"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_transitive",
+          "val" : "false"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "participates_in"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000036907",
+      "meta" : {
+        "definition" : {
+          "val" : "A fiat object part that is either a modified amino-acid residue or an unmodified amino-acid residue.",
+          "xrefs" : [ "PRO:DAN" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "amino-acid residue",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external. Note: This entity is distinct from CHEBI: \"amino-acid residue\" in that it includes residues that are technically not part of that class. [PRO:JSG]"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "amino acid chain component"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_2759",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "euk-",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "ncbi_taxonomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Eukaryota"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "biological_process"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "BFO:0000050"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "part_of"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "part_of"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+      "type" : "PROPERTY",
+      "lbl" : "shorthand"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+      "type" : "PROPERTY",
+      "lbl" : "has_obo_namespace"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000026291",
+      "meta" : {
+        "definition" : {
+          "val" : "An amino-acid residue that has not been covalently modified by chemical alteration to the side chain or backbone atoms.",
+          "xrefs" : [ "PRO:DAN" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "unmodified amino acid chain residue",
+          "xrefs" : [ "PRO:DAN" ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "unmodified protein residue",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "unmodified amino-acid residue"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "type" : "PROPERTY",
+      "lbl" : "definition"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "BFO:0000051"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_part"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has_part"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000030",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "bfo"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "object"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002180",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002180"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_component"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_transitive",
+          "val" : "false"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has_component"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_23367",
+      "meta" : {
+        "definition" : {
+          "val" : "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.",
+          "xrefs" : [ "fake:2" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "molecular entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_24431",
+      "meta" : {
+        "definition" : {
+          "val" : "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "chemical entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_50047",
+      "meta" : {
+        "definition" : {
+          "val" : "A compound formally derived from ammonia by replacing one, two or three hydrogen atoms by organyl groups.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "organic amino compound"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "zebrafish",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "ncbi_taxonomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Danio rerio"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0000087"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_role"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_transitive",
+          "val" : "false"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has_role"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_33708",
+      "meta" : {
+        "definition" : {
+          "val" : "When two or more amino acids combine to form a peptide, the elements of water are removed, and what remains of each amino acid is called an amino-acid residue.",
+          "xrefs" : [ "Dummy:dummy" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "amino acid residue",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "protein residue",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "amino-acid residue"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000000001",
+      "meta" : {
+        "definition" : {
+          "val" : "An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA.",
+          "xrefs" : [ "PRO:DAN", "PRO:WCB" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Proteins descended from a common ancestor can be classified into families and superfamilies composed of products of evolutionarily-related genes. The domain architecture of a protein is described by the order of its constituent domains. Proteins with the same domains in the same order are defined as homeomorphic [PRO:WCB]."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "protein"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0001025"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "located_in"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "located_in"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_33247",
+      "meta" : {
+        "definition" : {
+          "val" : "Any substituent group or skeleton containing carbon.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "organic group"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002215",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002215"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "capable_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_transitive",
+          "val" : "false"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "capable_of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_33700",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "proteinogenic amino-acid residue"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/NCBITaxon_33208",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "metazoan-",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "ncbi_taxonomy"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "Metazoa"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000018263",
+      "meta" : {
+        "definition" : {
+          "val" : "An organic amino compound that is a polymer of amino acid chain components (unmodified amino-acid residues and/or modified amino-acid residues) linked by peptide bonds or derivatives of such bonds.",
+          "xrefs" : [ "PRO:DAN", "PRO:JSG" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "peptide",
+          "xrefs" : [ "PRO:DAN" ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "polypeptide",
+          "xrefs" : [ "PRO:DAN" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "amino acid chain"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_related_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000016261",
+      "meta" : {
+        "definition" : {
+          "val" : "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof.",
+          "xrefs" : [ "PRO:DNx" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "siderophilin",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "beta-1 metal-binding globulin",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Trf",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "TF",
+          "xrefs" : [ "PRO:DNx" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "transferrin",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=gene."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "serotransferrin"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "bfo"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "fiat object part"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_broad_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000036199",
+      "meta" : {
+        "definition" : {
+          "val" : "An organic group that results from covalent modification or chemical alteration to the backbone atoms of amino acid residues so that their peptide bond is altered but the C1 and alpha-N bond is uncleaved.",
+          "xrefs" : [ "PRO:DAN", "PRO:JSG" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "non-peptidyl modified amino-acid residue"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "bfo"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "material entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/OBI_0100026",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "obi"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "organism"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasScope",
+      "type" : "PROPERTY",
+      "lbl" : "has_scope"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_narrow_synonym"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+      "type" : "PROPERTY",
+      "lbl" : "has_alternative_id"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PR_000036198",
+      "meta" : {
+        "definition" : {
+          "val" : "An amino-acid residue that results from covalent modification or chemical alteration to the side chain or backbone atoms such that the peptide bonds remain.",
+          "xrefs" : [ "PRO:DAN", "PRO:JSG" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "protein"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Category=external."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "peptidyl modified amino-acid residue"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000036907",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000024"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0008150",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000036199",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0001000",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33708"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000026291",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33708"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_33208",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_33154"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000018263",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PR_000018263"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33700",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33708"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/OBI_0100026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_50047",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000036198",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33708"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_33208"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_23367",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24431"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33247",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000030",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000018263",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/PR_000036907"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_33154",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/NCBITaxon_2759"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000025513",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33247"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_33708",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33247"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_24431",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000016261",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PR_000000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/NCBITaxon_2759",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/OBI_0100026"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PR_000036199",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33247"
+    } ],
+    "id" : "http://purl.obolibrary.org/obo/mgpo/imports/pr_import.owl",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ ],
+      "version" : "http://purl.obolibrary.org/obo/mgpo/releases/2019-04-23/imports/pr_import.owl"
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ ],
+    "propertyChainAxioms" : [ ]
+  } ]
+}

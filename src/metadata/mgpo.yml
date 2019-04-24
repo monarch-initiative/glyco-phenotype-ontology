@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/mgpo
+
+idspace: MGPO
+base_url: /obo/mgpo
+
+products:
+- mgpo.owl: https://raw.githubusercontent.com/monarch-initiative/glyco-phenotype-ontology/master/mgpo.owl
+- mgpo.obo: https://raw.githubusercontent.com/monarch-initiative/glyco-phenotype-ontology/master/mgpo.obo
+
+term_browser: ontobee
+example_terms:
+- mgpo_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/monarch-initiative/glyco-phenotype-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/monarch-initiative/glyco-phenotype-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/MGPO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/monarch-initiative/glyco-phenotype-ontology/master/
