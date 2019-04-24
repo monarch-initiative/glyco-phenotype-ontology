@@ -12,12 +12,14 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/mgpo.owl">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2016-05-22/pato.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uberon_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/chebi_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pro_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/go_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/pato_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/uberon_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/chebi_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/ro_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/pr_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/go_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/imports/iao_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/mgpo/patterns/definitions.owl"/>
         <rdfs:comment>Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.
 
 The challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn&apos;t really hurt anything.</rdfs:comment>
@@ -44,25 +46,25 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002032 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002032 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002032">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/MGPO_0002032">
         <rdfs:label xml:lang="en">mgpo_editor_note</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002037 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002037 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002037">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/MGPO_0002037">
         <rdfs:label xml:lang="en">alternative term</rdfs:label>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002098 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002098 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002098">
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/MGPO_0002098">
         <rdfs:label xml:lang="en">example</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -282,7 +284,7 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBItemp_0002236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBItemp_0002164"/>
         <obo:IAO_0000115>The branch or antenna component of a glycan chain, which extends the glycan &apos;core&apos;.</obo:IAO_0000115>
-        <obo:UPHENO_0002037>antennary glycan group</obo:UPHENO_0002037>
+        <obo:MGPO_0002037>antennary glycan group</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">glycan antenna</rdfs:label>
     </owl:Class>
     
@@ -293,7 +295,7 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBItemp_0002237">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBItemp_0002164"/>
         <obo:IAO_0000115>The &apos;core&apos; of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan.</obo:IAO_0000115>
-        <obo:UPHENO_0002037>core glycan group</obo:UPHENO_0002037>
+        <obo:MGPO_0002037>core glycan group</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">glycan core</rdfs:label>
     </owl:Class>
     
@@ -308,27 +310,27 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0001001 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0001001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0001001">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0001001">
         <rdfs:label xml:lang="en">Phenotype</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002001 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An abnormality in the process of glycan catabolism or biosynthesis.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan metabolism</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002002 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002002">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002002">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -349,17 +351,17 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
         <obo:IAO_0000115>An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein.</obo:IAO_0000115>
-        <obo:UPHENO_0002032>Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective.</obo:UPHENO_0002032>
+        <obo:MGPO_0002032>Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective.</obo:MGPO_0002032>
         <rdfs:label xml:lang="en">abnormal glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002003 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002003 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002003">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002003">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -384,24 +386,24 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <obo:IAO_0000115>An increase or decrease in the number of glycan chains conjugated to an aglycone target.</obo:IAO_0000115>
-        <obo:UPHENO_0002032>Relevant Classification Axes (in order shown for exemplar classes below):
+        <obo:MGPO_0002032>Relevant Classification Axes (in order shown for exemplar classes below):
 1  glycosylation/target type (N-linked vs O-linked vs proteoglycan)
 1.1  glycosylated residue (e.g. Asn, Ser, Thr)
 1.2  specific aglycone target (e.g. transferrin)
 1.2.1  anatomical/cellular location (e.g. serum, golgi)
-</obo:UPHENO_0002032>
+</obo:MGPO_0002032>
         <rdfs:comment>&quot;Occupancy&quot; is used here to describe the extent of conjugation of a glycan chain to glycosylation sites on an aglycone target. Abnormal occupancy does not speak to the structure or composition of the glycan chain, just the relative abundance of glycan chains on some protein or lipid target.</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycan occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002004 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002004 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:comment>A change in the molecular structure of a glycan, including altered sugar composition, chain length, linkage or branching patterns, or modifications on a sugar residues</rdfs:comment>
         <rdfs:comment>Former logical definition:
 
@@ -415,53 +417,53 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002005 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002005 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>Abnormality in a biological process that has a glycan or glycan-containing entity as a product or active  participant.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan-related process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002006 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002006 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002005"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002005"/>
         <obo:IAO_0000115>An abnormality in the process of a glycan binding to its target.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan binding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002007 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002007 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An abnormality in the process of glycan deglycosylation.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal deglycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002008 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002008 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002001"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002001"/>
         <rdfs:label xml:lang="en">abnormal glycan catabolism</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002009 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002009 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
         <obo:IAO_0000115>An abnormality in the structure or composition of glycans, or their attachment to aglycone conjugation targets.</obo:IAO_0000115>
-        <obo:UPHENO_0002032>Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy.</obo:UPHENO_0002032>
-        <obo:UPHENO_0002037>abnormal glycan structure</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>abnormal glycosylation structure</obo:UPHENO_0002037>
+        <obo:MGPO_0002032>Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy.</obo:MGPO_0002032>
+        <obo:MGPO_0002037>abnormal glycan structure</obo:MGPO_0002037>
+        <obo:MGPO_0002037>abnormal glycosylation structure</obo:MGPO_0002037>
         <rdfs:comment>Abnormal glycosylation phenotypes cover altered glycan composition, including altered sugar residue content, chain length, linkage, or branching patterns, as well as altered occupancy, characterized by abnormal degree or pattens or conjugation of glycan chains to aglycone targets.
 
 Abnormal glycosylation phenotypes typically result from defects in the machinery that directly (glycosyltransferase, glycosidase, oligosaccharyltransferase enzymes) or indierctly (isomerasaes, transport proteins, chaperones, glycan residue synthesis/activation pathways, etc.) contribute to the building/remodeling of glycan chains, or their attachement to aglycone targets.</rdfs:comment>
@@ -470,9 +472,9 @@ Abnormal glycosylation phenotypes typically result from defects in the machinery
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002010 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002010 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002010">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002010">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -493,21 +495,21 @@ Abnormal glycosylation phenotypes typically result from defects in the machinery
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <obo:IAO_0000115>A change in the structure of a glycan chain due to altered branching patterns. </obo:IAO_0000115>
-        <obo:UPHENO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
+        <obo:MGPO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
 1  attachment (conjugated vs free glycans)
 1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)
 1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)
-</obo:UPHENO_0002032>
+</obo:MGPO_0002032>
         <rdfs:label xml:lang="en">abnormal glycan branching</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002011 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002011 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002011">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002011">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -532,18 +534,18 @@ Abnormal glycosylation phenotypes typically result from defects in the machinery
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <obo:IAO_0000115>A change in the strucutre of a glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
-        <obo:UPHENO_0002037>abnormal glycan chain composition</obo:UPHENO_0002037>
+        <obo:MGPO_0002037>abnormal glycan chain composition</obo:MGPO_0002037>
         <rdfs:comment>abnormal glycosylation of glycans</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002012 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002012 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002012">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002012">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -568,16 +570,16 @@ Abnormal glycosylation phenotypes typically result from defects in the machinery
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002201"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002201"/>
         <obo:IAO_0000115>An increase or decrease in the number of N-glycan chains conjugated to aglycone targets.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal N-linked glycoprotein occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002013 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002013 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002013">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002013">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -602,111 +604,111 @@ Abnormal glycosylation phenotypes typically result from defects in the machinery
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002202"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002202"/>
         <obo:IAO_0000115>An increase or decrease in the number of O-glycan chains conjugated to aglycone targets.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal O-linked glycoprotein occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002017 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002017 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002036"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002036"/>
         <obo:IAO_0000115>Altered IDUA enzymatic activity in an organism, cell, or part thereof.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal IDUA activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002018 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002018 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002008"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002008"/>
         <rdfs:label xml:lang="en">abnormal heparan sulfate degradation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002019 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002019 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002006"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002006"/>
         <rdfs:label xml:lang="en">abnormal R-type lectin binding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002023 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002023 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the number of N-glycan chains conjugated to transferrin protein.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal transferrin N-glycan occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002024 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002024 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002023"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002023"/>
         <obo:IAO_0000115>An increase or decrease in the number of N-glycan chains conjugated to transferrin protein in blood serum.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal serum transferrin N-glycan occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002027 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002027 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of normal biantennary N-gycan structures present in the golgi complex.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal golgi biantennary N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002028 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002028 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002028">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002028">
         <rdfs:label xml:lang="en">DeprecatedClass</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002029 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002029 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An alteration in the activity of a molecular entity such as an enzyme or transporter protein that acts on glycans or glycan-containing entities.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan-related activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002030 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002030 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002001"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002001"/>
         <rdfs:label xml:lang="en">abnormal glycan biosynthesis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002031 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002031 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002008"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002008"/>
         <rdfs:label xml:lang="en">abnormal glycosaminoglycan degradation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002033 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002033 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002033">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A phenotype characterized by abnormality in the levels or structural composition of a glycan.</obo:IAO_0000115>
         <rdfs:comment>previous logical def: &apos;
 
@@ -719,31 +721,31 @@ has part&apos; some
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002035 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002035 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>Altered glycosyltransferase activity in an organism, cell, or part thereof.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycosyltransferase activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002036 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002036 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002036">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>Altered glycosidase enzymatic activity in an organism, cell, or part thereof.</obo:IAO_0000115>
-        <obo:UPHENO_0002037 xml:lang="en">abnormal glycosyl-hydrolase activity</obo:UPHENO_0002037>
+        <obo:MGPO_0002037 xml:lang="en">abnormal glycosyl-hydrolase activity</obo:MGPO_0002037>
         <rdfs:label>abnormal glycosidase activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002038 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002038 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002038">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002209"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002209"/>
         <obo:IAO_0000115>An increase or decrease in the extent of number of glycan chains conjugated to proteoglycans.</obo:IAO_0000115>
         <rdfs:comment>Former logical def:
 
@@ -757,19 +759,19 @@ has part&apos; some
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002039 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002039 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002039">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the number of N-glycan chains conjugated to asparagine residues on aglycone targets.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal N-linked glycoprotein asparagine occupancy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002041 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002041 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002041">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002041">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -790,315 +792,315 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <obo:IAO_0000115>A change in the strucutre of a glycan chain due to variations in the number of sugar residue constituents.</obo:IAO_0000115>
-        <obo:UPHENO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
+        <obo:MGPO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
 1  attachment (conjugated vs free glycans)
 1.1  aglycone class (e.g. glycoprotein-linked vs glycolipid-linked)
-1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)</obo:UPHENO_0002032>
-        <obo:UPHENO_0002037>abnormal length of glycan species</obo:UPHENO_0002037>
+1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)</obo:MGPO_0002032>
+        <obo:MGPO_0002037>abnormal length of glycan species</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">abnormal glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002042 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002042 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A change in the strucutre of a glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
-        <obo:UPHENO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
+        <obo:MGPO_0002032>Relevant Classification Axes (in order shown for exemplar classes above):
 1  attachment (conjugated vs free glycans)
 1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)
-1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)</obo:UPHENO_0002032>
+1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)</obo:MGPO_0002032>
         <rdfs:label xml:lang="en">abnormal glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002048 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002048 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002048">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A change in the strucutre of a serum-localized N-glycan chain due to variations in number and/or location of sialyl residues - typically an increased or decreased abundance of sialyl residues, or the substitution of sialyl residues for another residue type.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal sialyl content in serum N-glycans</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002050 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002050 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002050">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A change in the strucutre of a glycolipid glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycolipid glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002051 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002051 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002050"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002050"/>
         <rdfs:label xml:lang="en">abnormal glycosphingolipid glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002052 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002052 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002052">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002050"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002050"/>
         <rdfs:label xml:lang="en">abnormal glycoglycerolipid glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002053 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002053 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002053">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A change in the strucutre of a lipopolysaccharide glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal lipopolysaccharide glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002054 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002054 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal conjugated glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002055 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002055 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal free glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002056 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002056 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycoprotein glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002057 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002057 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycolipid glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002058 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002058 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal lipopolysaccharide glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002059 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002059 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002056"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002056"/>
         <rdfs:label xml:lang="en">abnormal N-glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002060 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002060 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002056"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002056"/>
         <rdfs:label xml:lang="en">abnormal O-glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002062 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002062 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycopeptide glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002068 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002068 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002068">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002042"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002042"/>
         <obo:IAO_0000115>A change in the strucutre of a free glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal free glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002069 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002069 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002069">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002042"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002042"/>
         <obo:IAO_0000115>A change in the strucutre of a conjugated glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal conjugated glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002070 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002070 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002069"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002069"/>
         <obo:IAO_0000115>A change in the strucutre of a glycoprotein glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycoprotein glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002071 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002071 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002071">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002069"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002069"/>
         <obo:IAO_0000115>A change in the strucutre of a glycopeptide glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycopeptide glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002073 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002073 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002073">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002070"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002070"/>
         <obo:IAO_0000115>A change in the strucutre of an O-glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal O-glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002074 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002074 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002074">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002070"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002070"/>
         <obo:IAO_0000115>A change in the strucutre of n N-glycan chain due to altered types of linkages between sugar residues. </obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal N-glycan linkage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002078 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002078 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002078">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of normal glycopeptide gycan structures present in the body, cell, or specific location therein.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycopeptide glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002081 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002081 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002056"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002056"/>
         <rdfs:label xml:lang="en">abnormal glycosaminoglycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002085 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002085 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002085">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of glycan structures present in the blood serum..</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan levels in the serum</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002086 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002086 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002086">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of glycan structures present in the CSF fluid.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal glycan levels in the CSF</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002092 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002092 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002092">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of Man9GlcNAc2 gycan structures present in the body, cell, or specific location therein.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal Man9GlcNAc2 glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002093 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002093 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002093">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of normal oligomannose N-gycan structures present in the golgi complex.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal oligomannose N-glycan levels in golgi</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002094 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002094 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002094">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of transferring-linked oligomannose N-gycan structures present in the body, cell, or specific location therein.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal transferrin-linked oligomannose N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002096 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002096 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>An increase or decrease in the amount or concentration of Tn core O-gycan structures present in the plasma membrane of blood cells.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal Tn core O-glycan levels in blood cell plasma membrane</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002097 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002097 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002097">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002035"/>
-        <obo:UPHENO_0002098>see PMID:11805078</obo:UPHENO_0002098>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002035"/>
+        <obo:MGPO_0002098>see PMID:11805078</obo:MGPO_0002098>
         <rdfs:label xml:lang="en">abnormal GlcNAcT-II activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002099 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002099 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002099">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
-        <obo:UPHENO_0002098>see PMID:11805078</obo:UPHENO_0002098>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
+        <obo:MGPO_0002098>see PMID:11805078</obo:MGPO_0002098>
         <rdfs:label xml:lang="en">decreased complex N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002101 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002101 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002101">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <obo:IAO_0000115>A phenotype characterized by abnormality of a glyco-conjugate molecular entity.</obo:IAO_0000115>
         <rdfs:comment>Former logical def:
 
@@ -1111,45 +1113,45 @@ has part&apos; some
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002102 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002102 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycoprotein phenotype</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002103 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002103 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002103">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycolipid phenotype</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002104 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002104 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002104">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycopeptide phenotype</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002105 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002105 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002105">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormal glycoaminoacid phenotype</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002106 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002106 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002106">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002106">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1170,15 +1172,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002189"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
         <rdfs:label xml:lang="en">abnormal glycoaminoacid levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002114 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002114 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002114">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002114">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1199,16 +1201,16 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002041"/>
-        <obo:UPHENO_0002037>extended glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002041"/>
+        <obo:MGPO_0002037>extended glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002115 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002115 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002115">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002115">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1229,36 +1231,36 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002041"/>
-        <obo:UPHENO_0002037>truncated glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002041"/>
+        <obo:MGPO_0002037>truncated glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">decreased glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002117 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002117 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002117">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002059"/>
-        <obo:UPHENO_0002037>extended N-glycan</obo:UPHENO_0002037>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002059"/>
+        <obo:MGPO_0002037>extended N-glycan</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased N-glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002118 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002118 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002118">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002059"/>
-        <obo:UPHENO_0002037>truncated N-glycan</obo:UPHENO_0002037>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002059"/>
+        <obo:MGPO_0002037>truncated N-glycan</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">decreased N-glycan length</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002120 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002120 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002120">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002120">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1289,15 +1291,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002210"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002210"/>
         <rdfs:label xml:lang="en">abnormal fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002121 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002121 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002121">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002121">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1328,15 +1330,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002120"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002120"/>
         <rdfs:label xml:lang="en">increased fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002122 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002122 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002122">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002122">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1367,42 +1369,42 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002120"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002120"/>
         <rdfs:label xml:lang="en">decreased fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002138 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002138 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002138">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002138">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">proteoglycan glycan chain</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002140 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002140 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002140">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">lipid-linked glycan chain</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002142 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002142 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002142">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">peptide-linked glycan chain</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002165 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002165 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002165">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002165">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1427,17 +1429,17 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002204"/>
-        <obo:UPHENO_0002037>abnormal N-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>abnormal fucosylation of N-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002204"/>
+        <obo:MGPO_0002037>abnormal N-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>abnormal fucosylation of N-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">abnormal N-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002166 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002166 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002166">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002166">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1462,18 +1464,18 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
-        <obo:UPHENO_0002037>hyper-fucosylation of N-glycans</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>increased N-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>increased fucosylation of N-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002165"/>
+        <obo:MGPO_0002037>hyper-fucosylation of N-glycans</obo:MGPO_0002037>
+        <obo:MGPO_0002037>increased N-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>increased fucosylation of N-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased N-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002167 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002167 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002167">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002167">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1498,19 +1500,19 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002165"/>
-        <obo:UPHENO_0002037>decreased N-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>decreased fucosylation of N-glycans</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>hypo-fucosylation of N-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002165"/>
+        <obo:MGPO_0002037>decreased N-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>decreased fucosylation of N-glycans</obo:MGPO_0002037>
+        <obo:MGPO_0002037>hypo-fucosylation of N-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">decreased N-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002182 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002182 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002209"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002209"/>
         <rdfs:comment>Former logical def:
 
 &apos;has part&apos; some 
@@ -1523,9 +1525,9 @@ has part&apos; some
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002189 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002189 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002189">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002189">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1546,16 +1548,16 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
         <rdfs:label xml:lang="en">abnormal glyco-conjugate levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002190 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002190 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002190">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002209"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002209"/>
         <rdfs:comment>Former logical def:
 
 &apos;has part&apos; some 
@@ -1567,63 +1569,63 @@ has part&apos; some
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002192 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002192 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002192">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0001001"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
         <rdfs:label xml:lang="en">abnormal glycan binding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002193 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002193 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002193">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">abnormality of carbohydrate metabolism/homeostasis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002199 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002199 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002199">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <rdfs:label xml:lang="en">abnormal protein glycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002200 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002200 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002200">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <rdfs:label xml:lang="en">abnormal lipid glycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002201 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002201 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002201">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002199"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002199"/>
         <rdfs:label xml:lang="en">abnormal protein N-linked glycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002202 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002202 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002202">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002199"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002199"/>
         <rdfs:label xml:lang="en">abnormal protein O-linked glycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002204 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002204 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002204">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002204">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1648,15 +1650,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002201"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002201"/>
         <rdfs:label xml:lang="en">abnormal N-glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002205 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002205 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002205">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002205">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1681,15 +1683,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002202"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002202"/>
         <rdfs:label xml:lang="en">abnormal O-glycan composition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002206 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002206 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002206">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002206">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1714,17 +1716,17 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002205"/>
-        <obo:UPHENO_0002037>abnormal O-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>abnormal fucosylation of O-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002205"/>
+        <obo:MGPO_0002037>abnormal O-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>abnormal fucosylation of O-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">abnormal O-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002207 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002207 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002207">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002207">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1749,18 +1751,18 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002206"/>
-        <obo:UPHENO_0002037>decreased O-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>decreased fucosylation of O-glycans</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>hypo-fucosylation of O-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002206"/>
+        <obo:MGPO_0002037>decreased O-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>decreased fucosylation of O-glycans</obo:MGPO_0002037>
+        <obo:MGPO_0002037>hypo-fucosylation of O-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">decreased O-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002208 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002208 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002208">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002208">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1785,27 +1787,27 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002206"/>
-        <obo:UPHENO_0002037>hyper-fucosylation of O-glycans</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>increased O-glycan fucose content</obo:UPHENO_0002037>
-        <obo:UPHENO_0002037>increased fucosylation of O-glycans</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002206"/>
+        <obo:MGPO_0002037>hyper-fucosylation of O-glycans</obo:MGPO_0002037>
+        <obo:MGPO_0002037>increased O-glycan fucose content</obo:MGPO_0002037>
+        <obo:MGPO_0002037>increased fucosylation of O-glycans</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased O-glycan fucosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002209 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002209 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002209">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002028"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002209">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002028"/>
         <rdfs:label xml:lang="en">Triaged Candidates</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002210 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002210 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002210">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002210">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1826,15 +1828,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
         <rdfs:label xml:lang="en">abnormal N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002211 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002211 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002211">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002211">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1855,15 +1857,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
         <rdfs:label xml:lang="en">abnormal free glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002212 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002212 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002212">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002212">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1894,15 +1896,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002213"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002213"/>
         <rdfs:label xml:lang="en">increased free glycan levels in the urine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002213 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002213 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002213">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002213">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1923,15 +1925,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002211"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
         <rdfs:label xml:lang="en">increased free glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002214 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002214 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002214">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002214">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1952,15 +1954,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002211"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
         <rdfs:label xml:lang="en">decreased free glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002215 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002215 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002215">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002215">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1991,15 +1993,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002214"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002214"/>
         <rdfs:label xml:lang="en">decreased free glycan levels in the urine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002216 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002216 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002216">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002216">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2030,16 +2032,16 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002212"/>
-        <obo:UPHENO_0002037>oligosacchariduria</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002212"/>
+        <obo:MGPO_0002037>oligosacchariduria</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased free oligosaccharide levels in the urine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002217 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002217 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002217">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002217">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2070,16 +2072,16 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002212"/>
-        <obo:UPHENO_0002037>monosacchariduria</obo:UPHENO_0002037>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002212"/>
+        <obo:MGPO_0002037>monosacchariduria</obo:MGPO_0002037>
         <rdfs:label xml:lang="en">increased free monosaccharide levels in the urine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002218 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002218 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002218">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002218">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2110,15 +2112,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002211"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
         <rdfs:label xml:lang="en">abnormal free glycan levels in the urine</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002219 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002219 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002219">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002219">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2139,15 +2141,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
         <rdfs:label xml:lang="en">abnormal O-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002220 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002220 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002220">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002220">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2178,15 +2180,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002219"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002219"/>
         <rdfs:label xml:lang="en">abnormal fucosylated O-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002221 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002221 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002221">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002221">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2217,15 +2219,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002220"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002220"/>
         <rdfs:label xml:lang="en">decreased fucosylated O-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002222 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002222 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002222">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002222">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2256,15 +2258,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002220"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002220"/>
         <rdfs:label xml:lang="en">increased fucosylated O-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002223 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002223 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002223">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002223">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2285,15 +2287,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002226"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002226"/>
         <rdfs:label xml:lang="en">abnormal glycosyltransferase activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002224 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002224 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002224">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002224">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2314,15 +2316,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002226"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002226"/>
         <rdfs:label xml:lang="en">abnormal glycosidase activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002225 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002225 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002225">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002225">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2343,15 +2345,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002223"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002223"/>
         <rdfs:label xml:lang="en">abnormal oligosaccharyl transferase activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002226 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002226 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002226">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002226">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2380,15 +2382,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002009"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002009"/>
         <rdfs:label xml:lang="en">abnormal glycosylation activity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002227 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002227 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002227">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002227">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2409,15 +2411,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002010"/>
         <rdfs:label xml:lang="en">increased glycan branching</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002228 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002228 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002228">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002228">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2438,25 +2440,25 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002010"/>
         <rdfs:label xml:lang="en">decreased glycan branching</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002229 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002229 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002229">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002201"/>
-        <obo:UPHENO_0002032>Not made equivalent to &apos;Abnrmal isoelectric focusing of serum transferrin&apos; because there are other methods that could be used to reveal this phenotype.</obo:UPHENO_0002032>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002201"/>
+        <obo:MGPO_0002032>Not made equivalent to &apos;Abnrmal isoelectric focusing of serum transferrin&apos; because there are other methods that could be used to reveal this phenotype.</obo:MGPO_0002032>
         <rdfs:label xml:lang="en">abnormal transferrin N-linked glycosylation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002230 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002230 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002230">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002230">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2491,15 +2493,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002229"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002229"/>
         <rdfs:label xml:lang="en">abnormal occupancy of transferrin by N-glycans</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002231 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002231 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002231">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002231">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2534,15 +2536,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002229"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002229"/>
         <rdfs:label xml:lang="en">abnormal composition of transferrin-conjugated N-glycans</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002233 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002233 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002233">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002233">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2563,15 +2565,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002189"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
         <rdfs:label xml:lang="en">abnormal glycoprotein levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002234 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002234 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002234">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002234">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2592,15 +2594,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002189"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
         <rdfs:label xml:lang="en">abnormal glycopeptide levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002235 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002235 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002235">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002235">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2641,15 +2643,15 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002122"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002122"/>
         <rdfs:label xml:lang="en">decreased core-fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UPHENO_0002238 -->
+    <!-- http://purl.obolibrary.org/obo/MGPO_0002238 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UPHENO_0002238">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002238">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2690,7 +2692,7 @@ has part&apos; some
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UPHENO_0002122"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002122"/>
         <rdfs:label xml:lang="en">decreased antennary-fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
 </rdf:RDF>
