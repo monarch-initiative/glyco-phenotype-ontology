@@ -20,9 +20,6 @@ http://purl.obolibrary.org/obo/CHEBItemp_0002136
 http://purl.obolibrary.org/obo/CHEBItemp_0002143
 http://purl.obolibrary.org/obo/CHEBItemp_0002148
 http://purl.obolibrary.org/obo/CHEBItemp_0002164
-http://purl.obolibrary.org/obo/GO_0004576
-http://purl.obolibrary.org/obo/GO_0016757
-http://purl.obolibrary.org/obo/GO_0016798
 http://purl.obolibrary.org/obo/IAO_0000115
 http://purl.obolibrary.org/obo/MGPO_0002002
 http://purl.obolibrary.org/obo/MGPO_0002003
@@ -53,15 +50,11 @@ http://purl.obolibrary.org/obo/MGPO_0002216
 http://purl.obolibrary.org/obo/MGPO_0002217
 http://purl.obolibrary.org/obo/MGPO_0002218
 http://purl.obolibrary.org/obo/MGPO_0002219
-http://purl.obolibrary.org/obo/MGPO_0002223
-http://purl.obolibrary.org/obo/MGPO_0002224
-http://purl.obolibrary.org/obo/MGPO_0002225
 http://purl.obolibrary.org/obo/MGPO_0002227
 http://purl.obolibrary.org/obo/MGPO_0002228
 http://purl.obolibrary.org/obo/MGPO_0002231
 http://purl.obolibrary.org/obo/MGPO_0002233
 http://purl.obolibrary.org/obo/MGPO_0002234
-http://purl.obolibrary.org/obo/PATO_0000001
 http://purl.obolibrary.org/obo/PATO_0000001
 http://purl.obolibrary.org/obo/PATO_0000070
 http://purl.obolibrary.org/obo/PATO_0000122

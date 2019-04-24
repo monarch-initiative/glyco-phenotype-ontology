@@ -1,0 +1,89 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17089>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24396>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_35258>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBItemp_0002131>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBItemp_0002135>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBItemp_0002136>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBItemp_0002143>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBItemp_0002148>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002106>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002189>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002210>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002211>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002219>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002233>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002234>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002002> (abnormal glycan level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002002> "An abnormal level of glycan."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002002> "abnormal glycan level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002131>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002106> (abnormal glyco-amino acid level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002106> "An abnormal level of glyco-amino acid."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002106> "abnormal glyco-amino acid level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_35258>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002189> (abnormal glyco-conjugate level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002189> "An abnormal level of glyco-conjugate."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002189> "abnormal glyco-conjugate level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002189> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002148>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002210> (abnormal N-glycan chain level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002210> "An abnormal level of N-glycan chain."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002210> "abnormal N-glycan chain level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002210> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002135>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002211> (abnormal free glycan level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002211> "An abnormal level of free glycan."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002211> "abnormal free glycan level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002211> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002143>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002219> (abnormal O-glycan chain level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002219> "An abnormal level of O-glycan chain."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002219> "abnormal O-glycan chain level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002219> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002136>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002233> (abnormal glycoprotein level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002233> "An abnormal level of glycoprotein."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002233> "abnormal glycoprotein level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17089>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002234> (abnormal glycopeptide level)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002234> "An abnormal level of glycopeptide."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002234> "abnormal glycopeptide level"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_24396>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+
+)

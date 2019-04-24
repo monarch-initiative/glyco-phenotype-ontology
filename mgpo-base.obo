@@ -114,7 +114,9 @@ is_a: MGPO:0002028 ! DeprecatedClass
 
 [Term]
 id: MGPO:0002002
+name: abnormal glycan level
 name: abnormal glycan levels
+def: "An abnormal level of glycan." []
 def: "An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein." []
 is_a: MGPO:0001001 ! Phenotype
 property_value: MGPO:0002032 "Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective." xsd:string
@@ -489,8 +491,10 @@ is_a: MGPO:0002028 ! DeprecatedClass
 
 [Term]
 id: MGPO:0002106
+name: abnormal glyco-amino acid level
 name: abnormal glycoaminoacid levels
-is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+def: "An abnormal level of glyco-amino acid." []
+is_a: MGPO:0002189 ! abnormal glyco-conjugate level
 
 [Term]
 id: MGPO:0002114
@@ -519,7 +523,7 @@ property_value: MGPO:0002037 "truncated N-glycan" xsd:string
 [Term]
 id: MGPO:0002120
 name: abnormal fucosylated N-glycan levels
-is_a: MGPO:0002210 ! abnormal N-glycan levels
+is_a: MGPO:0002210 ! abnormal N-glycan chain level
 
 [Term]
 id: MGPO:0002121
@@ -577,7 +581,9 @@ is_a: MGPO:0002209 ! Triaged Candidates
 
 [Term]
 id: MGPO:0002189
+name: abnormal glyco-conjugate level
 name: abnormal glyco-conjugate levels
+def: "An abnormal level of glyco-conjugate." []
 is_a: MGPO:0001001 ! Phenotype
 
 [Term]
@@ -656,60 +662,84 @@ is_a: MGPO:0002028 ! DeprecatedClass
 
 [Term]
 id: MGPO:0002210
+name: abnormal N-glycan chain level
 name: abnormal N-glycan levels
-is_a: MGPO:0002002 ! abnormal glycan levels
+def: "An abnormal level of N-glycan chain." []
+is_a: MGPO:0002002 ! abnormal glycan level
 
 [Term]
 id: MGPO:0002211
+name: abnormal free glycan level
 name: abnormal free glycan levels
-is_a: MGPO:0002002 ! abnormal glycan levels
+def: "An abnormal level of free glycan." []
+is_a: MGPO:0002002 ! abnormal glycan level
 
 [Term]
 id: MGPO:0002212
 name: increased free glycan levels in the urine
-is_a: MGPO:0002213 ! increased free glycan levels
+name: increased level of free glycan in urine
+def: "An increase in the level of free glycan in urine." []
+synonym: "increased level of free glycan in urine" EXACT []
+is_a: MGPO:0002213 ! increased level of free glycan
 
 [Term]
 id: MGPO:0002213
 name: increased free glycan levels
-is_a: MGPO:0002211 ! abnormal free glycan levels
+name: increased level of free glycan
+def: "An increased amount in the level of free glycan." []
+synonym: "increased free glycan level" EXACT []
+is_a: MGPO:0002211 ! abnormal free glycan level
 
 [Term]
 id: MGPO:0002214
 name: decreased free glycan levels
-is_a: MGPO:0002211 ! abnormal free glycan levels
+name: decreased level of free glycan
+def: "A decreased amount in the level of free glycan." []
+is_a: MGPO:0002211 ! abnormal free glycan level
 
 [Term]
 id: MGPO:0002215
 name: decreased free glycan levels in the urine
+name: decreased level of free glycan in urine
+def: "A decrease in the level of free glycan in urine." []
 is_a: MGPO:0002214 ! decreased free glycan levels
 
 [Term]
 id: MGPO:0002216
 name: increased free oligosaccharide levels in the urine
-is_a: MGPO:0002212 ! increased free glycan levels in the urine
+name: increased level of oligosaccharide in urine
+def: "An increase in the level of oligosaccharide in urine." []
+synonym: "increased level of oligosaccharide in urine" EXACT []
+is_a: MGPO:0002212 ! increased level of free glycan in urine
 property_value: MGPO:0002037 "oligosacchariduria" xsd:string
 
 [Term]
 id: MGPO:0002217
 name: increased free monosaccharide levels in the urine
-is_a: MGPO:0002212 ! increased free glycan levels in the urine
+name: increased level of monosaccharide in urine
+def: "An increase in the level of monosaccharide in urine." []
+synonym: "increased level of monosaccharide in urine" EXACT []
+is_a: MGPO:0002212 ! increased level of free glycan in urine
 property_value: MGPO:0002037 "monosacchariduria" xsd:string
 
 [Term]
 id: MGPO:0002218
 name: abnormal free glycan levels in the urine
-is_a: MGPO:0002211 ! abnormal free glycan levels
+name: abnormal urine free glycan level
+def: "An abnormal level of free glycan in the urine." []
+is_a: MGPO:0002211 ! abnormal free glycan level
 
 [Term]
 id: MGPO:0002219
+name: abnormal O-glycan chain level
 name: abnormal O-glycan levels
-is_a: MGPO:0002002 ! abnormal glycan levels
+def: "An abnormal level of O-glycan chain." []
+is_a: MGPO:0002002 ! abnormal glycan level
 
 [Term]
 id: MGPO:0002220
 name: abnormal fucosylated O-glycan levels
-is_a: MGPO:0002219 ! abnormal O-glycan levels
+is_a: MGPO:0002219 ! abnormal O-glycan chain level
 
 [Term]
 id: MGPO:0002221
@@ -769,13 +799,17 @@ is_a: MGPO:0002229 ! abnormal transferrin N-linked glycosylation
 
 [Term]
 id: MGPO:0002233
+name: abnormal glycoprotein level
 name: abnormal glycoprotein levels
-is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+def: "An abnormal level of glycoprotein." []
+is_a: MGPO:0002189 ! abnormal glyco-conjugate level
 
 [Term]
 id: MGPO:0002234
+name: abnormal glycopeptide level
 name: abnormal glycopeptide levels
-is_a: MGPO:0002189 ! abnormal glyco-conjugate levels
+def: "An abnormal level of glycopeptide." []
+is_a: MGPO:0002189 ! abnormal glyco-conjugate level
 
 [Term]
 id: MGPO:0002235

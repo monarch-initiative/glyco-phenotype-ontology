@@ -1,0 +1,4 @@
+defined_class	defined_class_label	biological_process	biological_process_label
+http://purl.obolibrary.org/obo/MGPO_0002224	abnormal glycosidase activity	http://purl.obolibrary.org/obo/GO_0016798	
+http://purl.obolibrary.org/obo/MGPO_0002223	abnormal glycosyltransferase activity	http://purl.obolibrary.org/obo/GO_0016757	
+http://purl.obolibrary.org/obo/MGPO_0002225	abnormal oligosaccharyl transferase activity	http://purl.obolibrary.org/obo/GO_0004576	

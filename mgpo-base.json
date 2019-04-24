@@ -222,8 +222,14 @@
       "lbl" : "abnormal glycoaminoacid phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002106",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of glyco-amino acid.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
-      "lbl" : "abnormal glycoaminoacid levels"
+      "lbl" : "abnormal glyco-amino acid level"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002227",
       "type" : "CLASS",
@@ -266,6 +272,12 @@
       "lbl" : "increased fucosylated O-glycan levels"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002189",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of glyco-conjugate.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
       "lbl" : "abnormal glyco-conjugate levels"
     }, {
@@ -311,6 +323,15 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002217",
       "meta" : {
+        "definition" : {
+          "val" : "An increase in the level of monosaccharide in urine.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of monosaccharide in urine",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "monosacchariduria"
@@ -324,50 +345,100 @@
       "lbl" : "glyco-conjugate"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002218",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of free glycan in the urine.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
       "lbl" : "abnormal free glycan levels in the urine"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002219",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of O-glycan chain.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
       "lbl" : "abnormal O-glycan levels"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002213",
+      "meta" : {
+        "definition" : {
+          "val" : "An increased amount in the level of free glycan.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased free glycan level",
+          "xrefs" : [ ]
+        } ]
+      },
       "type" : "CLASS",
-      "lbl" : "increased free glycan levels"
+      "lbl" : "increased level of free glycan"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002059",
       "type" : "CLASS",
       "lbl" : "abnormal N-glycan length"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002214",
+      "meta" : {
+        "definition" : {
+          "val" : "A decreased amount in the level of free glycan.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
-      "lbl" : "decreased free glycan levels"
+      "lbl" : "decreased level of free glycan"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0001001",
       "type" : "CLASS",
       "lbl" : "Phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002215",
+      "meta" : {
+        "definition" : {
+          "val" : "A decrease in the level of free glycan in urine.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
       "lbl" : "decreased free glycan levels in the urine"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002216",
       "meta" : {
+        "definition" : {
+          "val" : "An increase in the level of oligosaccharide in urine.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of oligosaccharide in urine",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "oligosacchariduria"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased free oligosaccharide levels in the urine"
+      "lbl" : "increased level of oligosaccharide in urine"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002055",
       "type" : "CLASS",
       "lbl" : "abnormal free glycan length"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002210",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of N-glycan chain.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
-      "lbl" : "abnormal N-glycan levels"
+      "lbl" : "abnormal N-glycan chain level"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002056",
       "type" : "CLASS",
@@ -378,12 +449,29 @@
       "lbl" : "abnormal glycolipid glycan length"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002211",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of free glycan.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
       "lbl" : "abnormal free glycan levels"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002212",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase in the level of free glycan in urine.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of free glycan in urine",
+          "xrefs" : [ ]
+        } ]
+      },
       "type" : "CLASS",
-      "lbl" : "increased free glycan levels in the urine"
+      "lbl" : "increased level of free glycan in urine"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002058",
       "type" : "CLASS",
@@ -563,7 +651,7 @@
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002002",
       "meta" : {
         "definition" : {
-          "val" : "An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein.",
+          "val" : "An abnormal level of glycan.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -686,12 +774,24 @@
       "lbl" : "abnormal glycopeptide glycan levels"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002233",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of glycoprotein.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein levels"
+      "lbl" : "abnormal glycoprotein level"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002234",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of glycopeptide.",
+          "xrefs" : [ ]
+        }
+      },
       "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide levels"
+      "lbl" : "abnormal glycopeptide level"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002073",
       "meta" : {
@@ -1098,13 +1198,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002201",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002071",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002069"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002201",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002234",
       "pred" : "is_a",
@@ -1222,11 +1322,11 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002056",
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002033",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002033",
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002056",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
@@ -1302,13 +1402,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002219",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002219",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002231",
       "pred" : "is_a",
@@ -1546,13 +1646,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002042"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002225",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002223"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002027",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002225",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002223"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002102",
       "pred" : "is_a",
@@ -1570,13 +1670,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002039",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002018",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002039",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     } ],
     "id" : "http://purl.obolibrary.org/obo/mgpo/mgpo-base.json",
     "meta" : {

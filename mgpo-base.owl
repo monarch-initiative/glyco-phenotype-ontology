@@ -6,7 +6,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/mgpo/mgpo-base.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/mgpo/releases/2019-04-24/mgpo-base.owl"/>
         <rdfs:comment>Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.
@@ -56,6 +57,12 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/MGPO_0002098">
         <rdfs:label xml:lang="en">example</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     
 
 
@@ -320,24 +327,6 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0004576 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004576"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0016757 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016757"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0016798 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016798"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/MGPO_0001001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0001001">
@@ -380,8 +369,10 @@ The challenge remains w.r.t. confusion around when to annotate to a level vs a c
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of glycan.</obo:IAO_0000115>
         <obo:IAO_0000115>An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein.</obo:IAO_0000115>
         <obo:MGPO_0002032>Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective.</obo:MGPO_0002032>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal glycan level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal glycan levels</rdfs:label>
     </owl:Class>
     
@@ -1201,6 +1192,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of glyco-amino acid.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal glyco-amino acid level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal glycoaminoacid levels</rdfs:label>
     </owl:Class>
     
@@ -1487,6 +1480,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0001001"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of glyco-conjugate.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal glyco-conjugate level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal glyco-conjugate levels</rdfs:label>
     </owl:Class>
     
@@ -1767,6 +1762,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of N-glycan chain.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal N-glycan chain level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal N-glycan levels</rdfs:label>
     </owl:Class>
     
@@ -1796,6 +1793,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of free glycan.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal free glycan level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal free glycan levels</rdfs:label>
     </owl:Class>
     
@@ -1835,7 +1834,10 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002213"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An increase in the level of free glycan in urine.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of free glycan in urine</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">increased free glycan levels in the urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of free glycan in urine</rdfs:label>
     </owl:Class>
     
 
@@ -1864,7 +1866,10 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An increased amount in the level of free glycan.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased free glycan level</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">increased free glycan levels</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of free glycan</rdfs:label>
     </owl:Class>
     
 
@@ -1893,7 +1898,9 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A decreased amount in the level of free glycan.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">decreased free glycan levels</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased level of free glycan</rdfs:label>
     </owl:Class>
     
 
@@ -1932,7 +1939,9 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002214"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A decrease in the level of free glycan in urine.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">decreased free glycan levels in the urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased level of free glycan in urine</rdfs:label>
     </owl:Class>
     
 
@@ -1971,8 +1980,11 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002212"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An increase in the level of oligosaccharide in urine.</obo:IAO_0000115>
         <obo:MGPO_0002037>oligosacchariduria</obo:MGPO_0002037>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of oligosaccharide in urine</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">increased free oligosaccharide levels in the urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of oligosaccharide in urine</rdfs:label>
     </owl:Class>
     
 
@@ -2011,8 +2023,11 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002212"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An increase in the level of monosaccharide in urine.</obo:IAO_0000115>
         <obo:MGPO_0002037>monosacchariduria</obo:MGPO_0002037>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of monosaccharide in urine</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">increased free monosaccharide levels in the urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased level of monosaccharide in urine</rdfs:label>
     </owl:Class>
     
 
@@ -2051,7 +2066,9 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002211"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of free glycan in the urine.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">abnormal free glycan levels in the urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal urine free glycan level</rdfs:label>
     </owl:Class>
     
 
@@ -2080,6 +2097,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002002"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of O-glycan chain.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal O-glycan chain level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal O-glycan levels</rdfs:label>
     </owl:Class>
     
@@ -2115,26 +2134,6 @@ has part&apos; some
     <!-- http://purl.obolibrary.org/obo/MGPO_0002223 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002223">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016757"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002226"/>
         <rdfs:label xml:lang="en">abnormal glycosyltransferase activity</rdfs:label>
     </owl:Class>
@@ -2144,26 +2143,6 @@ has part&apos; some
     <!-- http://purl.obolibrary.org/obo/MGPO_0002224 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002224">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016798"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002226"/>
         <rdfs:label xml:lang="en">abnormal glycosidase activity</rdfs:label>
     </owl:Class>
@@ -2173,26 +2152,6 @@ has part&apos; some
     <!-- http://purl.obolibrary.org/obo/MGPO_0002225 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/MGPO_0002225">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0004576"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002223"/>
         <rdfs:label xml:lang="en">abnormal oligosaccharyl transferase activity</rdfs:label>
     </owl:Class>
@@ -2352,6 +2311,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of glycoprotein.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal glycoprotein level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal glycoprotein levels</rdfs:label>
     </owl:Class>
     
@@ -2381,6 +2342,8 @@ has part&apos; some
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002189"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abnormal level of glycopeptide.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal glycopeptide level</rdfs:label>
         <rdfs:label xml:lang="en">abnormal glycopeptide levels</rdfs:label>
     </owl:Class>
     
@@ -2401,12 +2364,6 @@ has part&apos; some
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MGPO_0002122"/>
         <rdfs:label xml:lang="en">decreased antennary-fucosylated N-glycan levels</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
     
 
 
