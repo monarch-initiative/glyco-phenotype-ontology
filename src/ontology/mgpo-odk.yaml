@@ -1,0 +1,35 @@
+id: mgpo
+title: "Molecular Glyco-Phenotype Ontology"
+github_org: monarch-initiative
+repo: glyco-phenotype-ontology
+report_fail_on: ERROR
+use_dosdps: TRUE
+dosdp_tools_options: "--obo-prefixes=true"
+namespaces: 
+  - http://purl.obolibrary.org/obo/MGPO_
+release_artefacts: 
+  - base
+  - full
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+import_group:
+  products:
+    - id: iao
+    - id: go
+    - id: ro
+    - id: uberon
+    - id: pato
+    - id: chebi
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl
+    - id: pr
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
+pattern_pipelines_group:
+  products:
+    - id: manual
+      dosdp_tools_options: "--obo-prefixes=true"
+robot_java_args: '-Xmx8G'   

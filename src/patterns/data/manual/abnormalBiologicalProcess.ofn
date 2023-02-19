@@ -1,0 +1,49 @@
+Prefix(:=<urn:unnamed:ontology#ont1>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0004576>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016757>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0016798>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002223>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002224>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MGPO_0002225>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002223> (abnormal transferase activity, transferring glycosyl groups)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002223> "Abnormal transferase activity, transferring glycosyl groups."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002223> "abnormal transferase activity, transferring glycosyl groups"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002223> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016757>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002224> (abnormal hydrolase activity, acting on glycosyl bonds)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002224> "Abnormal hydrolase activity, acting on glycosyl bonds."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002224> "abnormal hydrolase activity, acting on glycosyl bonds"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002224> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016798>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002225> (abnormal oligosaccharyl transferase activity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002225> "Abnormal oligosaccharyl transferase activity."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002225> "abnormal oligosaccharyl transferase activity"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0004576>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+
+
+)

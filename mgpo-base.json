@@ -1,29 +1,728 @@
 {
   "graphs" : [ {
+    "id" : "http://purl.obolibrary.org/obo/mgpo/mgpo-base.json",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/type",
+        "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
+      }, {
+        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+        "val" : "Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.\n\nThe challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn't really hurt anything."
+      }, {
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "2023-02-19"
+      } ],
+      "version" : "http://purl.obolibrary.org/obo/mgpo/releases/2023-02-19/mgpo-base.json"
+    },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002048",
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
+      "lbl" : "conjugated glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002131",
+      "lbl" : "glycan",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
+      "lbl" : "glycan residue",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
+      "lbl" : "fucose residue",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
+      "lbl" : "polypeptide-linked glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
+      "lbl" : "N-glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
+      "lbl" : "O-glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
+      "lbl" : "C-glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
+      "lbl" : "GPI anchor",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002143",
+      "lbl" : "free glycan",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002148",
+      "lbl" : "glyco-conjugate",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
+      "lbl" : "GPI-anchored glycoprotein",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152",
+      "lbl" : "protein glyco-conjugate",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002157",
+      "lbl" : "terminal fucose residue",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164",
+      "lbl" : "glycan group",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
+      "lbl" : "glycoprotein glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
+      "lbl" : "lipid-linked glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
+      "lbl" : "glycan antenna",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A change in the strucutre of a serum-localized N-glycan chain due to variations in number and/or location of sialyl residues - typically an increased or decreased abundance of sialyl residues, or the substitution of sialyl residues for another residue type.",
-          "xrefs" : [ ]
+          "val" : "The branch or antenna component of a glycan chain, which extends the glycan 'core'."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "antennary glycan group"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
+      "lbl" : "glycan core",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The 'core' of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "core glycan group"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0001001",
+      "lbl" : "Phenotype",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002001",
+      "lbl" : "abnormal glycan metabolism",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormality in the process of glycan catabolism or biosynthesis."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal sialyl content in serum N-glycans"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002202",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002002",
+      "lbl" : "abnormal glycan levels",
       "type" : "CLASS",
-      "lbl" : "abnormal protein O-linked glycosylation"
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount of a type or specific species of glycan present in the body, cell, or specific compartment  therein."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective."
+        } ]
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002204",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002003",
+      "lbl" : "abnormal glycan occupancy",
       "type" : "CLASS",
-      "lbl" : "abnormal N-glycan composition"
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of glycan chains conjugated to an aglycone target."
+        },
+        "comments" : [ "\"Occupancy\" is used here to describe the extent of conjugation of a glycan chain to glycosylation sites on an aglycone target. Abnormal occupancy does not speak to the structure or composition of the glycan chain, just the relative abundance of glycan chains on some protein or lipid target." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Relevant Classification Axes (in order shown for exemplar classes below):\n1  glycosylation/target type (N-linked vs O-linked vs proteoglycan)\n1.1  glycosylated residue (e.g. Asn, Ser, Thr)\n1.2  specific aglycone target (e.g. transferrin)\n1.2.1  anatomical/cellular location (e.g. serum, golgi)\n"
+        } ]
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002205",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002004",
+      "lbl" : "abnormal glycan structure",
       "type" : "CLASS",
-      "lbl" : "abnormal O-glycan composition"
+      "meta" : {
+        "comments" : [ "A change in the molecular structure of a glycan, including altered sugar composition, chain length, linkage or branching patterns, or modifications on a sugar residues", "Former logical definition:\n\n'has part' some \n    (structure\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))", "The distinction between abnormal glycan levels and abnormal glycan structure/composition is confounded by the fact that specific phenotypes in both categories are typically reported in the literature by describing  the amount of a particular type of glycan. For example, \"increased sialylated oligosaccharides in the lysosome\" is verbatim text reporting a ‘compositional’ defect, and \"increased levels of complex N-Glycans in the serum\"  is verbatim text reporting a ‘level’ defect. The key difference is that the former defect indicates that glycans contain abnormalities in their sialyl content that make them compositionally different that glycan end products normally found in the lysosome. And biologically, this defect likely results from defects in glycosylation, deglycosylation, or isomerase enzymes.  By contrast, the latter defect does not reflect a structural/compositional abnormality in the specified glycan, but rather that the level of a certain normal type of glycan end-product is elevated. Compared to a compositional phenotype, this defect likely has a very different biological cause related to abnormal glycan degradation or trafficking." ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002005",
+      "lbl" : "abnormal glycan-related process",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Abnormality in a biological process that has a glycan or glycan-containing entity as a product or active  participant."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002006",
+      "lbl" : "abnormal glycan binding",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormality in the process of a glycan binding to its target."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002007",
+      "lbl" : "abnormal deglycosylation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormality in the process of glycan deglycosylation."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002008",
+      "lbl" : "abnormal glycan catabolism",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002009",
+      "lbl" : "abnormal glycosylation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormality in the structure or composition of glycans, or their attachment to aglycone conjugation targets."
+        },
+        "comments" : [ "Abnormal glycosylation phenotypes cover altered glycan composition, including altered sugar residue content, chain length, linkage, or branching patterns, as well as altered occupancy, characterized by abnormal degree or pattens or conjugation of glycan chains to aglycone targets.\n\nAbnormal glycosylation phenotypes typically result from defects in the machinery that directly (glycosyltransferase, glycosidase, oligosaccharyltransferase enzymes) or indierctly (isomerasaes, transport proteins, chaperones, glycan residue synthesis/activation pathways, etc.) contribute to the building/remodeling of glycan chains, or their attachement to aglycone targets." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal glycan structure"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal glycosylation structure"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002010",
+      "lbl" : "abnormal glycan branching",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the structure of a glycan chain due to altered branching patterns. "
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)\n"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002011",
+      "lbl" : "abnormal glycan composition",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another."
+        },
+        "comments" : [ "abnormal glycosylation of glycans" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal glycan chain composition"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002012",
+      "lbl" : "abnormal N-linked glycoprotein occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of N-glycan chains conjugated to aglycone targets."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002013",
+      "lbl" : "abnormal O-linked glycoprotein occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of O-glycan chains conjugated to aglycone targets."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002017",
+      "lbl" : "abnormal IDUA activity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Altered IDUA enzymatic activity in an organism, cell, or part thereof."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002018",
+      "lbl" : "abnormal heparan sulfate degradation",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002019",
+      "lbl" : "abnormal R-type lectin binding",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002023",
+      "lbl" : "abnormal transferrin N-glycan occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002024",
+      "lbl" : "abnormal serum transferrin N-glycan occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein in blood serum."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002027",
+      "lbl" : "abnormal golgi biantennary N-glycan levels",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of normal biantennary N-gycan structures present in the golgi complex."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002028",
+      "lbl" : "DeprecatedClass",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002029",
+      "lbl" : "abnormal glycan-related activity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An alteration in the activity of a molecular entity such as an enzyme or transporter protein that acts on glycans or glycan-containing entities."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002030",
+      "lbl" : "abnormal glycan biosynthesis",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002031",
+      "lbl" : "abnormal glycosaminoglycan degradation",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+      "lbl" : "mgpo_editor_note",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002033",
+      "lbl" : "abnormal glycan phenotype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype characterized by abnormality in the levels or structural composition of a glycan."
+        },
+        "comments" : [ "previous logical def: '\n\nhas part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002035",
+      "lbl" : "abnormal glycosyltransferase activity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Altered glycosyltransferase activity in an organism, cell, or part thereof."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002036",
+      "lbl" : "abnormal glycosidase activity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Altered glycosidase enzymatic activity in an organism, cell, or part thereof."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal glycosyl-hydrolase activity"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+      "lbl" : "alternative term",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002038",
+      "lbl" : "abnormal proteoglycan occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the extent of number of glycan chains conjugated to proteoglycans."
+        },
+        "comments" : [ "Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some proteoglycan)\n     and (towards some 'conjugated glycan chain'))" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002039",
+      "lbl" : "abnormal N-linked glycoprotein asparagine occupancy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the number of N-glycan chains conjugated to asparagine residues on aglycone targets."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002041",
+      "lbl" : "abnormal glycan length",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycan chain due to variations in the number of sugar residue constituents."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycolipid-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal length of glycan species"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002042",
+      "lbl" : "abnormal glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycan chain due to altered types of linkages between sugar residues. "
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
+          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002048",
+      "lbl" : "abnormal sialyl content in serum N-glycans",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a serum-localized N-glycan chain due to variations in number and/or location of sialyl residues - typically an increased or decreased abundance of sialyl residues, or the substitution of sialyl residues for another residue type."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002050",
+      "lbl" : "abnormal glycolipid glycan composition",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycolipid glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002051",
+      "lbl" : "abnormal glycosphingolipid glycan composition",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002052",
+      "lbl" : "abnormal glycoglycerolipid glycan composition",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002053",
+      "lbl" : "abnormal lipopolysaccharide glycan composition",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a lipopolysaccharide glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002054",
+      "lbl" : "abnormal conjugated glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002055",
+      "lbl" : "abnormal free glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002056",
+      "lbl" : "abnormal glycoprotein glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002057",
+      "lbl" : "abnormal glycolipid glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002058",
+      "lbl" : "abnormal lipopolysaccharide glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002059",
+      "lbl" : "abnormal N-glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002060",
+      "lbl" : "abnormal O-glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002062",
+      "lbl" : "abnormal glycopeptide glycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002068",
+      "lbl" : "abnormal free glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a free glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002069",
+      "lbl" : "abnormal conjugated glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a conjugated glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002070",
+      "lbl" : "abnormal glycoprotein glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycoprotein glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002071",
+      "lbl" : "abnormal glycopeptide glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of a glycopeptide glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002073",
+      "lbl" : "abnormal O-glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of an O-glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002074",
+      "lbl" : "abnormal N-glycan linkage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A change in the strucutre of n N-glycan chain due to altered types of linkages between sugar residues. "
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002078",
+      "lbl" : "abnormal glycopeptide glycan levels",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of normal glycopeptide gycan structures present in the body, cell, or specific location therein."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002081",
+      "lbl" : "abnormal glycosaminoglycan length",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002085",
+      "lbl" : "abnormal glycan levels in the serum",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of glycan structures present in the blood serum.."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002086",
+      "lbl" : "abnormal glycan levels in the CSF",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of glycan structures present in the CSF fluid."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002092",
+      "lbl" : "abnormal Man9GlcNAc2 glycan levels",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of Man9GlcNAc2 gycan structures present in the body, cell, or specific location therein."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002093",
+      "lbl" : "abnormal oligomannose N-glycan levels in golgi",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of normal oligomannose N-gycan structures present in the golgi complex."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002094",
+      "lbl" : "abnormal transferrin-linked oligomannose N-glycan levels",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of transferring-linked oligomannose N-gycan structures present in the body, cell, or specific location therein."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002096",
+      "lbl" : "abnormal Tn core O-glycan levels in blood cell plasma membrane",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase or decrease in the amount or concentration of Tn core O-gycan structures present in the plasma membrane of blood cells."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002097",
+      "lbl" : "abnormal GlcNAcT-II activity",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002098",
+          "val" : "see PMID:11805078"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002098",
+      "lbl" : "example",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002099",
+      "lbl" : "decreased complex N-glycan levels",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002098",
+          "val" : "see PMID:11805078"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002101",
+      "lbl" : "abnormal glyco-conjugate phenotype",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype characterized by abnormality of a glyco-conjugate molecular entity."
+        },
+        "comments" : [ "Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glyco-conjugate))" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002102",
+      "lbl" : "abnormal glycoprotein phenotype",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002103",
+      "lbl" : "abnormal glycolipid phenotype",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002104",
+      "lbl" : "abnormal glycopeptide phenotype",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002105",
+      "lbl" : "abnormal glycoaminoacid phenotype",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002106",
+      "lbl" : "abnormal glycoaminoacid levels",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An abnormal level of glyco-amino acid."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002114",
+      "lbl" : "increased glycan length",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "extended glycans"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002115",
+      "lbl" : "decreased glycan length",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "truncated glycans"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002117",
+      "lbl" : "increased N-glycan length",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "extended N-glycan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002118",
+      "lbl" : "decreased N-glycan length",
+      "type" : "CLASS",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "truncated N-glycan"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002120",
+      "lbl" : "abnormal fucosylated N-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002121",
+      "lbl" : "increased fucosylated N-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002122",
+      "lbl" : "decreased fucosylated N-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002138",
+      "lbl" : "proteoglycan glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002140",
+      "lbl" : "lipid-linked glycan chain",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002142",
+      "lbl" : "peptide-linked glycan chain",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002165",
+      "lbl" : "abnormal N-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
@@ -32,1129 +731,620 @@
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "abnormal fucosylation of N-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal N-glycan fucosylation"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002166",
+      "lbl" : "increased N-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "increased fucosylation of N-glycans"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "hyper-fucosylation of N-glycans"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "increased N-glycan fucose content"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "increased fucosylation of N-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased N-glycan fucosylation"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002167",
+      "lbl" : "decreased N-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "hypo-fucosylation of N-glycans"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "decreased N-glycan fucose content"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "decreased fucosylation of N-glycans"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased N-glycan fucosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002200",
-      "type" : "CLASS",
-      "lbl" : "abnormal lipid glycosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002201",
-      "type" : "CLASS",
-      "lbl" : "abnormal protein N-linked glycosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002041",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycan chain due to variations in the number of sugar residue constituents.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal length of glycan species"
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycolipid-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002042",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan linkage"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164",
-      "type" : "CLASS",
-      "lbl" : "glycan group"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
-      "type" : "PROPERTY",
-      "lbl" : "definition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-      "type" : "PROPERTY",
-      "lbl" : "alternative term"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002038",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the extent of number of glycan chains conjugated to proteoglycans.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some proteoglycan)\n     and (towards some 'conjugated glycan chain'))"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal proteoglycan occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002039",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the number of N-glycan chains conjugated to asparagine residues on aglycone targets.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal N-linked glycoprotein asparagine occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002033",
-      "meta" : {
-        "definition" : {
-          "val" : "A phenotype characterized by abnormality in the levels or structural composition of a glycan.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "previous logical def: '\n\nhas part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002035",
-      "meta" : {
-        "definition" : {
-          "val" : "Altered glycosyltransferase activity in an organism, cell, or part thereof.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosyltransferase activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002036",
-      "meta" : {
-        "definition" : {
-          "val" : "Altered glycosidase enzymatic activity in an organism, cell, or part thereof.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal glycosyl-hydrolase activity"
+          "val" : "hypo-fucosylation of N-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosidase activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002030",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan biosynthesis"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002031",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosaminoglycan degradation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-      "type" : "PROPERTY",
-      "lbl" : "mgpo_editor_note"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002224",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosidase activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002103",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycolipid phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002225",
-      "type" : "CLASS",
-      "lbl" : "abnormal oligosaccharyl transferase activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002104",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002226",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosylation activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
-      "type" : "CLASS",
-      "lbl" : "GPI anchor"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002105",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoaminoacid phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002106",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of glyco-amino acid.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glyco-amino acid level"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002227",
-      "type" : "CLASS",
-      "lbl" : "increased glycan branching"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002220",
-      "type" : "CLASS",
-      "lbl" : "abnormal fucosylated O-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002221",
-      "type" : "CLASS",
-      "lbl" : "decreased fucosylated O-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002068",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a free glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal free glycan linkage"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002101",
-      "meta" : {
-        "definition" : {
-          "val" : "A phenotype characterized by abnormality of a glyco-conjugate molecular entity.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glyco-conjugate))"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glyco-conjugate phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002222",
-      "type" : "CLASS",
-      "lbl" : "increased fucosylated O-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002189",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of glyco-conjugate.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glyco-conjugate levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002069",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a conjugated glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal conjugated glycan linkage"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002223",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosyltransferase activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002102",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002062",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002060",
-      "type" : "CLASS",
-      "lbl" : "abnormal O-glycan length"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002182",
+      "lbl" : "abnormal glycoprotein glycan occupancy",
+      "type" : "CLASS",
       "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycoprotein)\n     and (towards some 'conjugated glycan chain'))"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein glycan occupancy"
+        "comments" : [ "Former logical def:\n\n'has part' some \n    ('altered number of'\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycoprotein)\n     and (towards some 'conjugated glycan chain'))" ]
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002143",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002189",
+      "lbl" : "abnormal glyco-conjugate levels",
       "type" : "CLASS",
-      "lbl" : "free glycan"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002217",
       "meta" : {
         "definition" : {
-          "val" : "An increase in the level of monosaccharide in urine.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "increased level of monosaccharide in urine",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "monosacchariduria"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased free monosaccharide levels in the urine"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002148",
-      "type" : "CLASS",
-      "lbl" : "glyco-conjugate"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002218",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of free glycan in the urine.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of glyco-conjugate."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal free glycan levels in the urine"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002219",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002190",
+      "lbl" : "abnormal fucose metabolism/homeostasis",
+      "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of O-glycan chain.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal O-glycan levels"
+        "comments" : [ "Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some 'fucose metabolic process'))" ]
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002213",
-      "meta" : {
-        "definition" : {
-          "val" : "An increased amount in the level of free glycan.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "increased free glycan level",
-          "xrefs" : [ ]
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased level of free glycan"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002192",
+      "lbl" : "abnormal glycan binding",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002059",
-      "type" : "CLASS",
-      "lbl" : "abnormal N-glycan length"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002193",
+      "lbl" : "abnormality of carbohydrate metabolism/homeostasis",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002214",
-      "meta" : {
-        "definition" : {
-          "val" : "A decreased amount in the level of free glycan.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased level of free glycan"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002199",
+      "lbl" : "abnormal protein glycosylation",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0001001",
-      "type" : "CLASS",
-      "lbl" : "Phenotype"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002200",
+      "lbl" : "abnormal lipid glycosylation",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002215",
-      "meta" : {
-        "definition" : {
-          "val" : "A decrease in the level of free glycan in urine.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased free glycan levels in the urine"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002201",
+      "lbl" : "abnormal protein N-linked glycosylation",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002216",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase in the level of oligosaccharide in urine.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "increased level of oligosaccharide in urine",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "oligosacchariduria"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased level of oligosaccharide in urine"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002202",
+      "lbl" : "abnormal protein O-linked glycosylation",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002055",
-      "type" : "CLASS",
-      "lbl" : "abnormal free glycan length"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002204",
+      "lbl" : "abnormal N-glycan composition",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002210",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of N-glycan chain.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal N-glycan chain level"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002056",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002057",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycolipid glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002211",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of free glycan.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal free glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002212",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase in the level of free glycan in urine.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "increased level of free glycan in urine",
-          "xrefs" : [ ]
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased level of free glycan in urine"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002058",
-      "type" : "CLASS",
-      "lbl" : "abnormal lipopolysaccharide glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002051",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosphingolipid glycan composition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002052",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoglycerolipid glycan composition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002053",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a lipopolysaccharide glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal lipopolysaccharide glycan composition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002054",
-      "type" : "CLASS",
-      "lbl" : "abnormal conjugated glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002050",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycolipid glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycolipid glycan composition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
-      "type" : "CLASS",
-      "lbl" : "GPI-anchored glycoprotein"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152",
-      "type" : "CLASS",
-      "lbl" : "protein glyco-conjugate"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002205",
+      "lbl" : "abnormal O-glycan composition",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002206",
+      "lbl" : "abnormal O-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal fucosylation of O-glycans"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "abnormal O-glycan fucose content"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
+          "val" : "abnormal fucosylation of O-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal O-glycan fucosylation"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002207",
+      "lbl" : "decreased O-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "hypo-fucosylation of O-glycans"
+          "val" : "decreased O-glycan fucose content"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "decreased fucosylation of O-glycans"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "decreased O-glycan fucose content"
+          "val" : "hypo-fucosylation of O-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased O-glycan fucosylation"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002208",
+      "lbl" : "increased O-glycan fucosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
           "val" : "hyper-fucosylation of O-glycans"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "increased fucosylation of O-glycans"
+          "val" : "increased O-glycan fucose content"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "increased O-glycan fucose content"
+          "val" : "increased fucosylation of O-glycans"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased O-glycan fucosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002157",
-      "type" : "CLASS",
-      "lbl" : "terminal fucose residue"
+      }
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002209",
-      "type" : "CLASS",
-      "lbl" : "Triaged Candidates"
+      "lbl" : "Triaged Candidates",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002004",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Former logical definition:\n\n'has part' some \n    (structure\n     and ('has modifier' some abnormal)\n     and ('inheres in' some glycan))"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The distinction between abnormal glycan levels and abnormal glycan structure/composition is confounded by the fact that specific phenotypes in both categories are typically reported in the literature by describing  the amount of a particular type of glycan. For example, \"increased sialylated oligosaccharides in the lysosome\" is verbatim text reporting a ‘compositional’ defect, and \"increased levels of complex N-Glycans in the serum\"  is verbatim text reporting a ‘level’ defect. The key difference is that the former defect indicates that glycans contain abnormalities in their sialyl content that make them compositionally different that glycan end products normally found in the lysosome. And biologically, this defect likely results from defects in glycosylation, deglycosylation, or isomerase enzymes.  By contrast, the latter defect does not reflect a structural/compositional abnormality in the specified glycan, but rather that the level of a certain normal type of glycan end-product is elevated. Compared to a compositional phenotype, this defect likely has a very different biological cause related to abnormal glycan degradation or trafficking."
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A change in the molecular structure of a glycan, including altered sugar composition, chain length, linkage or branching patterns, or modifications on a sugar residues"
-        } ]
-      },
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002210",
+      "lbl" : "abnormal N-glycan levels",
       "type" : "CLASS",
-      "lbl" : "abnormal glycan structure"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002005",
       "meta" : {
         "definition" : {
-          "val" : "Abnormality in a biological process that has a glycan or glycan-containing entity as a product or active  participant.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of N-glycan chain."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan-related process"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002006",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002211",
+      "lbl" : "abnormal free glycan levels",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An abnormality in the process of a glycan binding to its target.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of free glycan."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan binding"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002212",
+      "lbl" : "increased level of free glycan in urine",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The 'core' of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan.",
-          "xrefs" : [ ]
+          "val" : "An increase in the level of free glycan in urine."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "core glycan group"
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of free glycan in urine"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "glycan core"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002007",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002213",
+      "lbl" : "increased level of free glycan",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An abnormality in the process of glycan deglycosylation.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal deglycosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002121",
-      "type" : "CLASS",
-      "lbl" : "increased fucosylated N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002001",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormality in the process of glycan catabolism or biosynthesis.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan metabolism"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002122",
-      "type" : "CLASS",
-      "lbl" : "decreased fucosylated N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002002",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormal level of glycan.",
-          "xrefs" : [ ]
+          "val" : "An increased amount in the level of free glycan."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Here we make distinction between free and conjugated only deeper in the hierarchy - since often we don’t know origin. Often MS-based phenotypes simply refer to altered levels of a class of glycans - and these clearly go here. Other cases are trickier - e.g. elevated levels of mannose rich cores species. Here, if an MS-based phenotype cannot be best characterized with a residue-specific composition class, they should be documented here as a levels phenotype. Challenge is that the curator has to understand the expert interpretation of thee data to make selection here, and these interpretations can be quite nuanced/subjective."
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased free glycan level"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan levels"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002003",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002214",
+      "lbl" : "decreased level of free glycan",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An increase or decrease in the number of glycan chains conjugated to an aglycone target.",
-          "xrefs" : [ ]
+          "val" : "A decreased amount in the level of free glycan."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002215",
+      "lbl" : "decreased level of free glycan in urine",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A decrease in the level of free glycan in urine."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002216",
+      "lbl" : "increased level of oligosaccharide in urine",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An increase in the level of oligosaccharide in urine."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Relevant Classification Axes (in order shown for exemplar classes below):\n1  glycosylation/target type (N-linked vs O-linked vs proteoglycan)\n1.1  glycosylated residue (e.g. Asn, Ser, Thr)\n1.2  specific aglycone target (e.g. transferrin)\n1.2.1  anatomical/cellular location (e.g. serum, golgi)\n"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "\"Occupancy\" is used here to describe the extent of conjugation of a glycan chain to glycosylation sites on an aglycone target. Abnormal occupancy does not speak to the structure or composition of the glycan chain, just the relative abundance of glycan chains on some protein or lipid target."
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002085",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of glycan structures present in the blood serum..",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan levels in the serum"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002086",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of glycan structures present in the CSF fluid.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan levels in the CSF"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002120",
-      "type" : "CLASS",
-      "lbl" : "abnormal fucosylated N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002081",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosaminoglycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002118",
-      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of oligosaccharide in urine"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "truncated N-glycan"
+          "val" : "oligosacchariduria"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased N-glycan length"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002114",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002217",
+      "lbl" : "increased level of monosaccharide in urine",
+      "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "An increase in the level of monosaccharide in urine."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased level of monosaccharide in urine"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "extended glycans"
+          "val" : "monosacchariduria"
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased glycan length"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002235",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002218",
+      "lbl" : "abnormal urine free glycan level",
       "type" : "CLASS",
-      "lbl" : "decreased core-fucosylated N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002115",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "truncated glycans"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002117",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "extended N-glycan"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased N-glycan length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002238",
-      "type" : "CLASS",
-      "lbl" : "decreased antennary-fucosylated N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002231",
-      "type" : "CLASS",
-      "lbl" : "abnormal composition of transferrin-conjugated N-glycans"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002199",
-      "type" : "CLASS",
-      "lbl" : "abnormal protein glycosylation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002078",
       "meta" : {
         "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of normal glycopeptide gycan structures present in the body, cell, or specific location therein.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of free glycan in the urine."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide glycan levels"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002233",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002219",
+      "lbl" : "abnormal O-glycan levels",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An abnormal level of glycoprotein.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of O-glycan chain."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein level"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002234",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002220",
+      "lbl" : "abnormal fucosylated O-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002221",
+      "lbl" : "decreased fucosylated O-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002222",
+      "lbl" : "increased fucosylated O-glycan levels",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002223",
+      "lbl" : "abnormal transferase activity, transferring glycosyl groups",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An abnormal level of glycopeptide.",
-          "xrefs" : [ ]
+          "val" : "Abnormal transferase activity, transferring glycosyl groups."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide level"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002073",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002224",
+      "lbl" : "abnormal hydrolase activity, acting on glycosyl bonds",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A change in the strucutre of an O-glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
+          "val" : "Abnormal hydrolase activity, acting on glycosyl bonds."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal O-glycan linkage"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002074",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002225",
+      "lbl" : "abnormal oligosaccharyl transferase activity",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A change in the strucutre of n N-glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
+          "val" : "Abnormal oligosaccharyl transferase activity."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal N-glycan linkage"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002230",
-      "type" : "CLASS",
-      "lbl" : "abnormal occupancy of transferrin by N-glycans"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002226",
+      "lbl" : "abnormal glycosylation activity",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002190",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Former logical def:\n\n'has part' some \n    (quality\n     and ('has modifier' some abnormal)\n     and ('inheres in' some 'fucose metabolic process'))"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal fucose metabolism/homeostasis"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002070",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycoprotein glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycoprotein glycan linkage"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002192",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan binding"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002071",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycopeptide glycan chain due to altered types of linkages between sugar residues. ",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycopeptide glycan linkage"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002193",
-      "type" : "CLASS",
-      "lbl" : "abnormality of carbohydrate metabolism/homeostasis"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
-      "type" : "CLASS",
-      "lbl" : "fucose residue"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
-      "type" : "CLASS",
-      "lbl" : "glycan residue"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002131",
-      "type" : "CLASS",
-      "lbl" : "glycan"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
-      "type" : "CLASS",
-      "lbl" : "C-glycan chain"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002227",
+      "lbl" : "increased glycan branching",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002228",
-      "type" : "CLASS",
-      "lbl" : "decreased glycan branching"
+      "lbl" : "decreased glycan branching",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002229",
+      "lbl" : "abnormal transferrin N-linked glycosylation",
+      "type" : "CLASS",
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
           "val" : "Not made equivalent to 'Abnrmal isoelectric focusing of serum transferrin' because there are other methods that could be used to reveal this phenotype."
         } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal transferrin N-linked glycosylation"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
-      "type" : "CLASS",
-      "lbl" : "O-glycan chain"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002230",
+      "lbl" : "abnormal occupancy of transferrin by N-glycans",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
-      "type" : "CLASS",
-      "lbl" : "N-glycan chain"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002231",
+      "lbl" : "abnormal composition of transferrin-conjugated N-glycans",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002233",
+      "lbl" : "abnormal glycoprotein levels",
       "type" : "CLASS",
-      "lbl" : "polypeptide-linked glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
-      "type" : "CLASS",
-      "lbl" : "conjugated glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002027",
       "meta" : {
         "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of normal biantennary N-gycan structures present in the golgi complex.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of glycoprotein."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal golgi biantennary N-glycan levels"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002028",
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002234",
+      "lbl" : "abnormal glycopeptide levels",
       "type" : "CLASS",
-      "lbl" : "DeprecatedClass"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002029",
       "meta" : {
         "definition" : {
-          "val" : "An alteration in the activity of a molecular entity such as an enzyme or transporter protein that acts on glycans or glycan-containing entities.",
-          "xrefs" : [ ]
+          "val" : "An abnormal level of glycopeptide."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan-related activity"
+      }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002023",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal transferrin N-glycan occupancy"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002235",
+      "lbl" : "decreased core-fucosylated N-glycan levels",
+      "type" : "CLASS"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002024",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the number of N-glycan chains conjugated to transferrin protein in blood serum.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal serum transferrin N-glycan occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002140",
-      "type" : "CLASS",
-      "lbl" : "lipid-linked glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002142",
-      "type" : "CLASS",
-      "lbl" : "peptide-linked glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
-      "type" : "CLASS",
-      "lbl" : "lipid-linked glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
-      "type" : "CLASS",
-      "lbl" : "glycoprotein glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002019",
-      "type" : "CLASS",
-      "lbl" : "abnormal R-type lectin binding"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002138",
-      "type" : "CLASS",
-      "lbl" : "proteoglycan glycan chain"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002017",
-      "meta" : {
-        "definition" : {
-          "val" : "Altered IDUA enzymatic activity in an organism, cell, or part thereof.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal IDUA activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002018",
-      "type" : "CLASS",
-      "lbl" : "abnormal heparan sulfate degradation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002011",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the strucutre of a glycan chain due to variations in number and/or type of sugar residue constituents - typically an increased or decreased abundance of a given type of residue, or the substitution of on residue type for another.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "abnormal glycosylation of glycans"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal glycan chain composition"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan composition"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002099",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002098",
-          "val" : "see PMID:11805078"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased complex N-glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002012",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the number of N-glycan chains conjugated to aglycone targets.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal N-linked glycoprotein occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002013",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the number of O-glycan chains conjugated to aglycone targets.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal O-linked glycoprotein occupancy"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002096",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of Tn core O-gycan structures present in the plasma membrane of blood cells.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal Tn core O-glycan levels in blood cell plasma membrane"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002097",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002098",
-          "val" : "see PMID:11805078"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal GlcNAcT-II activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002010",
-      "meta" : {
-        "definition" : {
-          "val" : "A change in the structure of a glycan chain due to altered branching patterns. ",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Relevant Classification Axes (in order shown for exemplar classes above):\n1  attachment (conjugated vs free glycans)\n1.1  aglycone class (e.g. glycoprotein-linked vs glycopeptide-linked)\n1.1.1  more specific aglycone class (e.g. N-glycan  vs O-glycan for proteins)\n"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan branching"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002098",
-      "type" : "PROPERTY",
-      "lbl" : "example"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002092",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of Man9GlcNAc2 gycan structures present in the body, cell, or specific location therein.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal Man9GlcNAc2 glycan levels"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002093",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of normal oligomannose N-gycan structures present in the golgi complex.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal oligomannose N-glycan levels in golgi"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002094",
-      "meta" : {
-        "definition" : {
-          "val" : "An increase or decrease in the amount or concentration of transferring-linked oligomannose N-gycan structures present in the body, cell, or specific location therein.",
-          "xrefs" : [ ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal transferrin-linked oligomannose N-glycan levels"
+      "id" : "http://purl.obolibrary.org/obo/MGPO_0002238",
+      "lbl" : "decreased antennary-fucosylated N-glycan levels",
+      "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PR_000016261",
+      "lbl" : "serotransferrin",
+      "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof.",
-          "xrefs" : [ ]
+          "val" : "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof."
         }
-      },
-      "type" : "CLASS",
-      "lbl" : "serotransferrin"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
-      "meta" : {
-        "definition" : {
-          "val" : "The branch or antenna component of a glycan chain, which extends the glycan 'core'.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "antennary glycan group"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "glycan antenna"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002008",
-      "type" : "CLASS",
-      "lbl" : "abnormal glycan catabolism"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/MGPO_0002009",
-      "meta" : {
-        "definition" : {
-          "val" : "An abnormality in the structure or composition of glycans, or their attachment to aglycone conjugation targets.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Abnormal glycosylation phenotypes cover altered glycan composition, including altered sugar residue content, chain length, linkage, or branching patterns, as well as altered occupancy, characterized by abnormal degree or pattens or conjugation of glycan chains to aglycone targets.\n\nAbnormal glycosylation phenotypes typically result from defects in the machinery that directly (glycosyltransferase, glycosidase, oligosaccharyltransferase enzymes) or indierctly (isomerasaes, transport proteins, chaperones, glycan residue synthesis/activation pathways, etc.) contribute to the building/remodeling of glycan chains, or their attachement to aglycone targets."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal glycan structure"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "abnormal glycosylation structure"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002032",
-          "val" : "Can we logically define this . . . a ssome abnormal structure that inheres in some molecular entity that has part some gycan? This wont work if we have the abnormal glycosylation activity phenotypes in this hierarchy."
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal glycosylation"
+      }
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_17089",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002131",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24431"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002143",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002009",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002012",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002202"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002017",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002036"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002019",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002023",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002024",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002023"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002029",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002030",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002033",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002035",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002036",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002038",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002039",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002041",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002042",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002048",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002050",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002052",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002053",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002055",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002056",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002057",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002056"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002060",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002056"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002068",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002042"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002069",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002042"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002070",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002069"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002062",
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002071",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002069"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002073",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002074",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002078",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
@@ -1166,495 +1356,7 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002229",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002117",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002059"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002218",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002114",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002041"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002086",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002071",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002069"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002201",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002234",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002031",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002008"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002105",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002205",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002202"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002207",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002206"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002007",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002216",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002212"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002193",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002017",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002036"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002009",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002208",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002206"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002050",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002041",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002217",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002212"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002096",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002238",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002122"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002220",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002219"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002209",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002011",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002030",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002230",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002229"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002078",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002055",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002038",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002142",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002033",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002056",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002189",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002118",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002059"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002227",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002010"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002115",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002041"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002202",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002060",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002056"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002165",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002204"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002199",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002099",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002053",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002228",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002010"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002010",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002106",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002042",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002097",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002140",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002219",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002231",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002229"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002054",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002036",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002073",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002070"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002200",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002052",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002050"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002048",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002121",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002120"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002074",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002070"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002182",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002012",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_17089",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002120",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002210"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002057",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002190",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002013",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002202"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002223",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002226"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002023",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002003",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002058",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002035",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002051",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002050"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002213",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002005",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002069",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002042"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002103",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002138",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002093",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002215",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002214"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002059",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002056"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002006",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002005"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002222",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002220"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002104",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002214",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002192",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002029",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002094",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002204",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002206",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002205"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002224",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002226"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002019",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002006"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002221",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002220"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002166",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002165"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002212",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002213"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002233",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002101",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002122",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002120"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002210",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002024",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002023"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002235",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002122"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002167",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002165"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002004",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002068",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002042"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002027",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002225",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002223"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002102",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
@@ -1662,35 +1364,287 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002094",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002097",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002035"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002099",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002101",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002102",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002103",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002104",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002105",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002106",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002114",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002041"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002115",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002041"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002117",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002118",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002059"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002120",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002210"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002121",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002122",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002120"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002138",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002140",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002142",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002165",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002204"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002166",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002165"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002167",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002165"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002182",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002189",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002190",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002209"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002192",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0001001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002193",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002199",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002200",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002201",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002202",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002199"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002204",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002205",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002202"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002206",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002205"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002207",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002206"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002208",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002206"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002209",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002210",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002211",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002212",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002213"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002213",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002214",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002215",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002214"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002212"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002217",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002212"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002218",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002219",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002220",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002219"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002221",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002220"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002222",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002220"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002223",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002226"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002224",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002226"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002225",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002223"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002226",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002009"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002018",
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002227",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002008"
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002010"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002039",
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002228",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002229",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002230",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002229"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002231",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002229"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002233",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002234",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002189"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002235",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002122"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002238",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002122"
     } ],
-    "id" : "http://purl.obolibrary.org/obo/mgpo/mgpo-base.json",
-    "meta" : {
-      "subsets" : [ ],
-      "xrefs" : [ ],
-      "basicPropertyValues" : [ {
-        "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-        "val" : "Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.\n\nThe challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn't really hurt anything."
-      } ],
-      "version" : "http://purl.obolibrary.org/obo/mgpo/releases/2019-04-24/mgpo-base.json"
-    },
-    "equivalentNodesSets" : [ ],
-    "logicalDefinitionAxioms" : [ ],
-    "domainRangeAxioms" : [ ],
-    "propertyChainAxioms" : [ ]
+    "logicalDefinitionAxioms" : [ {
+      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002148",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBI_23367" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBI_36080" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002157",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBItemp_0002133" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0000053",
+        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0002476"
+      } ]
+    } ]
   } ]
 }
