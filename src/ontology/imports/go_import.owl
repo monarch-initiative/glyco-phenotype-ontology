@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mgpo/imports/go_import.owl>
-<http://purl.obolibrary.org/obo/mgpo/releases/2023-02-19/imports/go_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-01-01/go.owl>)
-Annotation(owl:versionInfo "2023-02-19")
+<http://purl.obolibrary.org/obo/mgpo/releases/2024-04-18/imports/go_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2024-03-28/go.owl>)
+Annotation(owl:versionInfo "2024-04-18")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0003824>))
@@ -24,19 +24,24 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000233>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_agr>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_candida>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_chembl>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_drosophila>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_generic>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_metagenomics>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_mouse>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_pir>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_plant>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_plant_ribbon>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_pombe>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_prokaryote>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_prokaryote_ribbon>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_yeast>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#prokaryote_subset>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
@@ -79,6 +84,10 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_chembl> <http:
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_drosophila> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon> (<http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
 # Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon> (<http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
@@ -103,17 +112,25 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_pir> <http://w
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_plant> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_plant_ribbon> (<http://purl.obolibrary.org/obo/go#goslim_plant_ribbon>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_plant_ribbon> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
 # Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_pombe> (<http://purl.obolibrary.org/obo/go#goslim_pombe>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_pombe> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_prokaryote> (<http://purl.obolibrary.org/obo/go#goslim_prokaryote>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_prokaryote> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_prokaryote_ribbon> (<http://purl.obolibrary.org/obo/go#goslim_prokaryote_ribbon>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_prokaryote_ribbon> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
 # Annotation Property: <http://purl.obolibrary.org/obo/go#goslim_yeast> (<http://purl.obolibrary.org/obo/go#goslim_yeast>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_yeast> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
-
-# Annotation Property: <http://purl.obolibrary.org/obo/go#prokaryote_subset> (<http://purl.obolibrary.org/obo/go#prokaryote_subset>)
-
-SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#prokaryote_subset> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
 # Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> (has_exact_synonym)
 
@@ -159,7 +176,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000066> "occ
 
 # Class: <http://purl.obolibrary.org/obo/GO_0003674> (molecular_function)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0003674> "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0003674> "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0003674> "GO:0005554")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0003674> "molecular function")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0003674> "molecular_function")
@@ -170,7 +187,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0003674> "molecular_function")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0003824> (catalytic activity)
@@ -182,11 +199,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0003824> "GO:0003824")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_agr>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_chembl>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_euk_cellular_processes_ribbon>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_generic>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_metagenomics>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_plant>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_plant_ribbon>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/go#goslim_prokaryote_ribbon>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0003824> "catalytic activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0003824> <http://purl.obolibrary.org/obo/GO_0003674>)
 
@@ -201,7 +221,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0004576> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008150> (biological_process)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008150> "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008150> "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0008150> "https://github.com/geneontology/go-ontology/issues/24968"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0008150> "jl")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0008150> "2012-09-19T15:05:24Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0008150> "GO:0000004")
@@ -221,7 +242,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_pombe>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0016740> (transferase activity)
@@ -242,8 +263,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#goslim_mouse>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#goslim_plant>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#goslim_prokaryote>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/go#prokaryote_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016740> "transferase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016740> <http://purl.obolibrary.org/obo/GO_0003824>)
 
@@ -298,8 +319,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#goslim_mouse>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#goslim_plant>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#goslim_prokaryote>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/go#prokaryote_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016787> "hydrolase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016787> <http://purl.obolibrary.org/obo/GO_0003824>)
 

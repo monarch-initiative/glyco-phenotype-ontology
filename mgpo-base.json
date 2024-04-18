@@ -10,109 +10,11 @@
         "val" : "Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.\n\nThe challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn't really hurt anything."
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-02-19"
+        "val" : "2024-04-18"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/mgpo/releases/2023-02-19/mgpo-base.json"
+      "version" : "http://purl.obolibrary.org/obo/mgpo/releases/2024-04-18/mgpo-base.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
-      "lbl" : "conjugated glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002131",
-      "lbl" : "glycan",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
-      "lbl" : "glycan residue",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
-      "lbl" : "fucose residue",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
-      "lbl" : "polypeptide-linked glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
-      "lbl" : "N-glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
-      "lbl" : "O-glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
-      "lbl" : "C-glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
-      "lbl" : "GPI anchor",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002143",
-      "lbl" : "free glycan",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002148",
-      "lbl" : "glyco-conjugate",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
-      "lbl" : "GPI-anchored glycoprotein",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152",
-      "lbl" : "protein glyco-conjugate",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002157",
-      "lbl" : "terminal fucose residue",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164",
-      "lbl" : "glycan group",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
-      "lbl" : "glycoprotein glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
-      "lbl" : "lipid-linked glycan chain",
-      "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
-      "lbl" : "glycan antenna",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "The branch or antenna component of a glycan chain, which extends the glycan 'core'."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "antennary glycan group"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
-      "lbl" : "glycan core",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "The 'core' of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/MGPO_0002037",
-          "val" : "core glycan group"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
-      "lbl" : "definition",
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0001001",
       "lbl" : "Phenotype",
       "type" : "CLASS"
@@ -996,11 +898,11 @@
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002223",
-      "lbl" : "abnormal transferase activity, transferring glycosyl groups",
+      "lbl" : "abnormal glycosyltransferase activity",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Abnormal transferase activity, transferring glycosyl groups."
+          "val" : "Abnormal glycosyltransferase activity."
         }
       }
     }, {
@@ -1077,81 +979,8 @@
       "id" : "http://purl.obolibrary.org/obo/MGPO_0002238",
       "lbl" : "decreased antennary-fucosylated N-glycan levels",
       "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PR_000016261",
-      "lbl" : "serotransferrin",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof."
-        }
-      }
     } ],
     "edges" : [ {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_17089",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002131",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24431"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002133",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002132"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002135",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002136",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002137",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002139",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002143",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_23367"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002151",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002187",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002134"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002188",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002236",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBItemp_0002237",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBItemp_0002164"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002028"
@@ -1198,7 +1027,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002012",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002012",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002013",
       "pred" : "is_a",
@@ -1498,7 +1335,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002204",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002204",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002201"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002205",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002011"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002205",
       "pred" : "is_a",
@@ -1532,6 +1377,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002213"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002212",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002218"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002213",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002211"
@@ -1543,6 +1392,10 @@
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002215",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002214"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002215",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002218"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002216",
       "pred" : "is_a",
@@ -1606,6 +1459,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002231",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/MGPO_0002204"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/MGPO_0002231",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002229"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002233",
@@ -1623,28 +1480,6 @@
       "sub" : "http://purl.obolibrary.org/obo/MGPO_0002238",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/MGPO_0002122"
-    } ],
-    "logicalDefinitionAxioms" : [ {
-      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002148",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBI_23367" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002152",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBI_36080" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_temp_0002141"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/CHEBItemp_0002157",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/CHEBItemp_0002133" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0000053",
-        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0002476"
-      } ]
     } ]
   } ]
 }

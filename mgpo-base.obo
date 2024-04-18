@@ -1,116 +1,9 @@
 format-version: 1.2
-data-version: mgpo/releases/2023-02-19/mgpo-base.owl
+data-version: mgpo/releases/2024-04-18/mgpo-base.owl
 remark: Testing approach where occupancy and composition and levels phenotypes are all grouped as siblings under a abnormal glycosylation parent.  This approach should simplify integration with HPO.\n\nThe challenge remains w.r.t. confusion around when to annotate to a level vs a composition phenotype (e.g. abnormal fucosylated glycan levels vs abnormal glycan fucose content), but we can try to clarify the rules here, and see what feedback we get when  we test.  Also, it may be fine just to say annotate to both if both would apply, and this doesn't really hurt anything.
 ontology: mgpo/mgpo-base
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
-property_value: owl:versionInfo "2023-02-19" xsd:string
-
-[Term]
-id: CHEBI:17089
-is_a: CHEBItemp:0002152 ! protein glyco-conjugate
-
-[Term]
-id: CHEBI_temp:0002141
-name: conjugated glycan chain
-is_a: CHEBItemp:0002164 ! glycan group
-
-[Term]
-id: CHEBItemp:0002131
-name: glycan
-is_a: CHEBI:24431
-union_of: CHEBItemp:0002143 ! free glycan
-union_of: CHEBItemp:0002164 ! glycan group
-
-[Term]
-id: CHEBItemp:0002132
-name: glycan residue
-is_a: CHEBItemp:0002164 ! glycan group
-
-[Term]
-id: CHEBItemp:0002133
-name: fucose residue
-is_a: CHEBItemp:0002132 ! glycan residue
-
-[Term]
-id: CHEBItemp:0002134
-name: polypeptide-linked glycan chain
-is_a: CHEBI_temp:0002141 ! conjugated glycan chain
-
-[Term]
-id: CHEBItemp:0002135
-name: N-glycan chain
-is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
-
-[Term]
-id: CHEBItemp:0002136
-name: O-glycan chain
-is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
-
-[Term]
-id: CHEBItemp:0002137
-name: C-glycan chain
-is_a: CHEBItemp:0002187 ! glycoprotein glycan chain
-
-[Term]
-id: CHEBItemp:0002139
-name: GPI anchor
-is_a: CHEBItemp:0002134 ! polypeptide-linked glycan chain
-
-[Term]
-id: CHEBItemp:0002143
-name: free glycan
-is_a: CHEBI:23367
-
-[Term]
-id: CHEBItemp:0002148
-name: glyco-conjugate
-intersection_of: CHEBI:23367
-intersection_of: BFO:0000051 CHEBI_temp:0002141 ! conjugated glycan chain
-
-[Term]
-id: CHEBItemp:0002151
-name: GPI-anchored glycoprotein
-is_a: CHEBItemp:0002152 ! protein glyco-conjugate
-
-[Term]
-id: CHEBItemp:0002152
-name: protein glyco-conjugate
-intersection_of: CHEBI:36080
-intersection_of: BFO:0000051 CHEBI_temp:0002141 ! conjugated glycan chain
-
-[Term]
-id: CHEBItemp:0002157
-name: terminal fucose residue
-intersection_of: CHEBItemp:0002133 ! fucose residue
-intersection_of: RO:0000053 PATO:0002476
-
-[Term]
-id: CHEBItemp:0002164
-name: glycan group
-
-[Term]
-id: CHEBItemp:0002187
-name: glycoprotein glycan chain
-is_a: CHEBItemp:0002134 ! polypeptide-linked glycan chain
-
-[Term]
-id: CHEBItemp:0002188
-name: lipid-linked glycan chain
-is_a: CHEBI_temp:0002141 ! conjugated glycan chain
-
-[Term]
-id: CHEBItemp:0002236
-name: glycan antenna
-def: "The branch or antenna component of a glycan chain, which extends the glycan 'core'." []
-is_a: CHEBItemp:0002164 ! glycan group
-property_value: MGPO:0002037 "antennary glycan group" xsd:string
-
-[Term]
-id: CHEBItemp:0002237
-name: glycan core
-def: "The 'core' of an N- or O- glycan chain, containing residues between the aglycone attachment point and extended/branched antennary regions of the glycan." []
-is_a: CHEBItemp:0002164 ! glycan group
-property_value: MGPO:0002037 "core glycan group" xsd:string
+property_value: owl:versionInfo "2024-04-18" xsd:string
 
 [Term]
 id: MGPO:0001001
@@ -199,12 +92,14 @@ property_value: MGPO:0002037 "abnormal glycan chain composition" xsd:string
 id: MGPO:0002012
 name: abnormal N-linked glycoprotein occupancy
 def: "An increase or decrease in the number of N-glycan chains conjugated to aglycone targets." []
+is_a: MGPO:0002003 ! abnormal glycan occupancy
 is_a: MGPO:0002201 ! abnormal protein N-linked glycosylation
 
 [Term]
 id: MGPO:0002013
 name: abnormal O-linked glycoprotein occupancy
 def: "An increase or decrease in the number of O-glycan chains conjugated to aglycone targets." []
+is_a: MGPO:0002003 ! abnormal glycan occupancy
 is_a: MGPO:0002202 ! abnormal protein O-linked glycosylation
 
 [Term]
@@ -635,11 +530,13 @@ is_a: MGPO:0002199 ! abnormal protein glycosylation
 [Term]
 id: MGPO:0002204
 name: abnormal N-glycan composition
+is_a: MGPO:0002011 ! abnormal glycan composition
 is_a: MGPO:0002201 ! abnormal protein N-linked glycosylation
 
 [Term]
 id: MGPO:0002205
 name: abnormal O-glycan composition
+is_a: MGPO:0002011 ! abnormal glycan composition
 is_a: MGPO:0002202 ! abnormal protein O-linked glycosylation
 
 [Term]
@@ -691,6 +588,7 @@ name: increased level of free glycan in urine
 def: "An increase in the level of free glycan in urine." []
 synonym: "increased level of free glycan in urine" EXACT []
 is_a: MGPO:0002213 ! increased level of free glycan
+is_a: MGPO:0002218 ! abnormal urine free glycan level
 
 [Term]
 id: MGPO:0002213
@@ -713,6 +611,7 @@ name: decreased free glycan levels in the urine
 name: decreased level of free glycan in urine
 def: "A decrease in the level of free glycan in urine." []
 is_a: MGPO:0002214 ! decreased free glycan levels
+is_a: MGPO:0002218 ! abnormal urine free glycan level
 
 [Term]
 id: MGPO:0002216
@@ -764,8 +663,7 @@ is_a: MGPO:0002220 ! abnormal fucosylated O-glycan levels
 [Term]
 id: MGPO:0002223
 name: abnormal glycosyltransferase activity
-name: abnormal transferase activity, transferring glycosyl groups
-def: "Abnormal transferase activity, transferring glycosyl groups." []
+def: "Abnormal glycosyltransferase activity." []
 is_a: MGPO:0002226 ! abnormal glycosylation activity
 
 [Term]
@@ -810,6 +708,7 @@ is_a: MGPO:0002229 ! abnormal transferrin N-linked glycosylation
 [Term]
 id: MGPO:0002231
 name: abnormal composition of transferrin-conjugated N-glycans
+is_a: MGPO:0002204 ! abnormal N-glycan composition
 is_a: MGPO:0002229 ! abnormal transferrin N-linked glycosylation
 
 [Term]
@@ -835,9 +734,4 @@ is_a: MGPO:0002122 ! decreased fucosylated N-glycan levels
 id: MGPO:0002238
 name: decreased antennary-fucosylated N-glycan levels
 is_a: MGPO:0002122 ! decreased fucosylated N-glycan levels
-
-[Term]
-id: PR:000016261
-name: serotransferrin
-def: "A protein that is a translation product of the human TF gene or a 1:1 ortholog thereof." []
 

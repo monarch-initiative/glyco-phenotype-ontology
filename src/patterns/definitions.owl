@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mgpo/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/mgpo/releases/2023-02-19/patterns/definitions.owl>
-Annotation(owl:versionInfo "2023-02-19")
+<http://purl.obolibrary.org/obo/mgpo/releases/2024-04-18/patterns/definitions.owl>
+Annotation(owl:versionInfo "2024-04-18")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17089>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24396>))
@@ -239,10 +239,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002219> "abnormal O-glycan chain level")
 EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002219> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000070> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBItemp_0002136>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
-# Class: <http://purl.obolibrary.org/obo/MGPO_0002223> (abnormal transferase activity, transferring glycosyl groups)
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002223> (abnormal glycosyltransferase activity)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002223> "Abnormal transferase activity, transferring glycosyl groups.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002223> "abnormal transferase activity, transferring glycosyl groups")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002223> "Abnormal glycosyltransferase activity.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002223> "abnormal glycosyltransferase activity")
 EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002223> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016757>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/MGPO_0002224> (abnormal hydrolase activity, acting on glycosyl bonds)

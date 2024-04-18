@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mgpo/imports/pr_import.owl>
-<http://purl.obolibrary.org/obo/mgpo/releases/2023-02-19/imports/pr_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pr/obophenotype/releases/2023-02-17/pr_slim.owl>)
-Annotation(owl:versionInfo "2023-02-19")
+<http://purl.obolibrary.org/obo/mgpo/releases/2024-04-18/imports/pr_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pr/obophenotype/releases/2023-10-12/pr_slim.owl>)
+Annotation(owl:versionInfo "2024-04-18")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33708>))
@@ -37,6 +37,7 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+Declaration(AnnotationProperty(<https://w3id.org/semapv/vocab/crossSpeciesExactMatch>))
 ############################
 #   Annotation Properties
 ############################
@@ -85,6 +86,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000016261> "PR:000016261")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000016261> "Category=gene.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000016261> "serotransferrin")
+AnnotationAssertion(<https://w3id.org/semapv/vocab/crossSpeciesExactMatch> <http://purl.obolibrary.org/obo/PR_000016261> <http://purl.obolibrary.org/obo/PR_P02787>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000016261> <http://purl.obolibrary.org/obo/PR_000000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PR_000018263> (amino acid chain)

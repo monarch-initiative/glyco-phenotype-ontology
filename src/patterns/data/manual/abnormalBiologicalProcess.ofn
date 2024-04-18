@@ -27,10 +27,10 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/MGPO_0002223> (abnormal transferase activity, transferring glycosyl groups)
+# Class: <http://purl.obolibrary.org/obo/MGPO_0002223> (abnormal glycosyltransferase activity)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002223> "Abnormal transferase activity, transferring glycosyl groups."^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002223> "abnormal transferase activity, transferring glycosyl groups"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MGPO_0002223> "Abnormal glycosyltransferase activity."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MGPO_0002223> "abnormal glycosyltransferase activity"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/MGPO_0002223> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001236> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/GO_0016757>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/MGPO_0002224> (abnormal hydrolase activity, acting on glycosyl bonds)
