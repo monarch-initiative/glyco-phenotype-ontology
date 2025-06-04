@@ -11,6 +11,8 @@ release_artefacts:
   - base
   - full
 primary_release: full
+workflows:
+  - qc
 export_formats:
   - owl
   - obo
